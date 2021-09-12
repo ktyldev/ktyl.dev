@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import 'colors.css';
+
+:root {
+    --title-height: min(20vmin, 90px);
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+
+    background-color: var(--background);
+}
+
+.title {
+    margin-left: 80px;
+    font-size: 1.4em;
+}
+
+h1 {
+    font-size: var(--font-size);
+    color: var(--color1);
+    padding-bottom: 0;
+    margin-bottom:0;
+}
+
+ul {
+    margin-top: 0;
+    list-style-type: none;
+}
+
+li {
+    display:inline;
+    /*padding-left: 1em;*/
+    transition: transform 0.2s;
+}
+
+li:hover {
+    transform: translate(10px);
+}
+
+a.fsText {
+    position:relative;
+    text-decoration: none;
+    background-color: var(--background);
+    color: var(--foreground-inactive);
+
+    padding: 0 6px;
+
+    transform: scale(1);
+    transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.fsText a {
+    text-decoration: none;
+    color: var(--foreground);
+}
+
+a.fsText:hover {
+    background-color: var(--background);
+    color: var(--foreground);
+
+    transform: scale(1.1, 1);
+}
+
+.fsText {
+    --font-size: 1.6em;
+    font-size: var(--font-size);
+    color: var(--foreground);
+}
+
+.column {
+    position: absolute;
+    width: max(30vmax,500px);
+    left:50%;
+    top:var(--title-height);
+    bottom:0;
+    padding: 10px 0 0;
+    background-color: var(--color0);
+    opacity: 0.7;
+
+    transform: translate(-50%, 0);
+}
+
+.column p {
+    margin: 0 40px;
+    padding-top: 20px;
+    color: #ffffff;
+}
+
+.column h1 {
+    padding-left: 30px;
+    padding-top: 10px;
+    left: 50%;
+    font-size: 1.3em;
+}
+
+.sidebar {
+    position: absolute;
+    left: 15px;
+    width: max(11vmax, 180px);
+    top:var(--title-height);
+    bottom:0;
+
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+.sidebarContent {
+    position: relative;
+    background-color: var(--background);
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.sidebar ul {
+    position: relative;
+    background-color: var(--background);
+    padding-left: 30px;
+}
+
+.sidebar li {
+    display: block;
+    margin: 5px 0 0 0;
+}
+
+.sidebar li a {
+    padding: 0 0;
+    margin-left: -20px;
+}
+
+.socials {
+    margin-top: 16px;
+    margin-left: 10px;
+    background-color:var(--background);
+}
+
+.socials i {
+    font-size: 2em;
+    margin-left: 4px;
+}
+
+.socials a {
+    color: var(--foreground-inactive);
+    text-decoration: none;
+
+    transition: color 0.3s;
+}
+
+.socials a:hover {
+    color: var(--foreground);
+}
+
+.planets {
+    position: absolute;
+    height: 60vmax;
+    width: 60vmax;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+
+    background-color: var(--color2);
+
+
+}
