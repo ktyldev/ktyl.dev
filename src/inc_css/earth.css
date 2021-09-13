@@ -1,0 +1,33 @@
+@-webkit-keyframes orbit_earth {
+    from    { -webkit-transform: rotate(360deg) translateX(#or_earth.css) rotate(360deg); }
+    to      { -webkit-transform: rotate(0deg) translateX(#or_earth.css) rotate(0deg); }
+}
+@-moz-keyframes orbit_earth {
+    from    { -moz-transform: rotate(360deg) translateX(#or_earth.css) rotate(360deg); }
+    to      { -moz-transform: rotate(0deg) translateX(#or_earth.css) rotate(0deg); }
+}
+@-o-keyframes orbit_earth {
+    from    { -o-transform: rotate(360deg) translateX(#or_earth.css) rotate(360deg); }
+    to      { -o-transform: rotate(0deg) translateX(#or_earth.css) rotate(0deg); }
+}
+@keyframes orbit_earth {
+    from    { transform: rotate(360deg) translateX(#or_earth.css) rotate(360deg); }
+    to      { transform: rotate(0deg) translateX(#or_earth.css) rotate(0deg); }
+}
+#earth {
+    --period: 20s;
+    --radius: 80px;
+    --color: #87ceeb;
+
+    width: var(--radius);
+    height: var(--radius);
+
+    background-color: var(--color);
+    right: #solposx.css;
+    bottom: #solposy.css;
+
+    -webkit-animation:  orbit_earth var(--period) linear infinite;
+    -moz-animation:     orbit_earth var(--period) linear infinite;
+    -o-animation:       orbit_earth var(--period) linear infinite;
+    animation:          orbit_earth var(--period) linear infinite;
+}

@@ -1,0 +1,33 @@
+@-webkit-keyframes orbit_mercury {
+    from    { -webkit-transform: rotate(360deg) translateX(#or_mercury.css) rotate(360deg); }
+    to      { -webkit-transform: rotate(0deg) translateX(#or_mercury.css) rotate(0deg); }
+}
+@-moz-keyframes orbit_mercury {
+    from    { -moz-transform: rotate(360deg) translateX(#or_mercury.css) rotate(360deg); }
+    to      { -moz-transform: rotate(0deg) translateX(#or_mercury.css) rotate(0deg); }
+}
+@-o-keyframes orbit_mercury {
+    from    { -o-transform: rotate(360deg) translateX(#or_mercury.css) rotate(360deg); }
+    to      { -o-transform: rotate(0deg) translateX(#or_mercury.css) rotate(0deg); }
+}
+@keyframes orbit_mercury {
+    from    { transform: rotate(360deg) translateX(#or_mercury.css) rotate(360deg); }
+    to      { transform: rotate(0deg) translateX(#or_mercury.css) rotate(0deg); }
+}
+#mercury {
+    --period: 4.82s;
+    --radius: 40px;
+    --color: #c89d7c;
+
+    width: var(--radius);
+    height: var(--radius);
+
+    background-color: var(--color);
+    right: #solposx.css;
+    bottom: #solposy.css;
+
+    -webkit-animation:  orbit_mercury var(--period) linear infinite;
+    -moz-animation:     orbit_mercury var(--period) linear infinite;
+    -o-animation:       orbit_mercury var(--period) linear infinite;
+    animation:          orbit_mercury var(--period) linear infinite;
+}

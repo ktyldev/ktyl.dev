@@ -1,0 +1,33 @@
+@-webkit-keyframes orbit_mars {
+    from    { -webkit-transform: rotate(360deg) translateX(#or_mars.css) rotate(360deg); }
+    to      { -webkit-transform: rotate(0deg) translateX(#or_mars.css) rotate(0deg); }
+}
+@-moz-keyframes orbit_mars {
+    from    { -moz-transform: rotate(360deg) translateX(#or_mars.css) rotate(360deg); }
+    to      { -moz-transform: rotate(0deg) translateX(#or_mars.css) rotate(0deg); }
+}
+@-o-keyframes orbit_mars {
+    from    { -o-transform: rotate(360deg) translateX(#or_mars.css) rotate(360deg); }
+    to      { -o-transform: rotate(0deg) translateX(#or_mars.css) rotate(0deg); }
+}
+@keyframes orbit_mars {
+    from    { transform: rotate(360deg) translateX(#or_mars.css) rotate(360deg); }
+    to      { transform: rotate(0deg) translateX(#or_mars.css) rotate(0deg); }
+}
+#mars {
+    --period: 37.6s;
+    --radius: 40px;
+    --color: #ff5349;
+
+    width: var(--radius);
+    height: var(--radius);
+
+    background-color: var(--color);
+    right: #solposx.css;
+    bottom: #solposy.css;
+
+    -webkit-animation:  orbit_mars var(--period) linear infinite;
+    -moz-animation:     orbit_mars var(--period) linear infinite;
+    -o-animation:       orbit_mars var(--period) linear infinite;
+    animation:          orbit_mars var(--period) linear infinite;
+}

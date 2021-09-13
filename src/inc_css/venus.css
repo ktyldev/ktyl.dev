@@ -1,0 +1,33 @@
+@-webkit-keyframes orbit_venus {
+    from    { -webkit-transform: rotate(360deg) translateX(#or_venus.css) rotate(360deg); }
+    to      { -webkit-transform: rotate(0deg) translateX(#or_venus.css) rotate(0deg); }
+}
+@-moz-keyframes orbit_venus {
+    from    { -moz-transform: rotate(360deg) translateX(#or_venus.css) rotate(360deg); }
+    to      { -moz-transform: rotate(0deg) translateX(#or_venus.css) rotate(0deg); }
+}
+@-o-keyframes orbit_venus {
+    from    { -o-transform: rotate(360deg) translateX(#or_venus.css) rotate(360deg); }
+    to      { -o-transform: rotate(0deg) translateX(#or_venus.css) rotate(0deg); }
+}
+@keyframes orbit_venus {
+    from    { transform: rotate(360deg) translateX(#or_venus.css) rotate(360deg); }
+    to      { transform: rotate(0deg) translateX(#or_venus.css) rotate(0deg); }
+}
+#venus {
+    --period: 12.3s;
+    --radius: 70px;
+    --color: #eed053;
+
+    width: var(--radius);
+    height: var(--radius);
+
+    background-color: var(--color);
+    right: #solposx.css;
+    bottom: #solposy.css;
+
+    -webkit-animation:  orbit_venus var(--period) linear infinite;
+    -moz-animation:     orbit_venus var(--period) linear infinite;
+    -o-animation:       orbit_venus var(--period) linear infinite;
+    animation:          orbit_venus var(--period) linear infinite;
+}

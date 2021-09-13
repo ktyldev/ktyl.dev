@@ -74,7 +74,7 @@ a.fsText:hover {
     left:50%;
     top:var(--title-height);
     padding: 10px 0 50px;
-    background-color: var(--foreground);
+    background-color: var(--foreground-inactive);
 
     transform: translate(-50%, 0);
 }
@@ -87,10 +87,12 @@ a.fsText:hover {
 }
 
 .column h1 {
-    padding-left: 30px;
+    color: var(--background);
+
+    padding-left: 60px;
     padding-top: 10px;
-    left: 50%;
     font-size: 1.3em;
+    font-weight: bold;
 }
 
 .sidebar {
@@ -107,8 +109,7 @@ a.fsText:hover {
 .sidebarContent {
     position: relative;
     background-color: var(--background);
-    top: 50%;
-    transform: translate(0, -50%);
+    padding-top: 5%;
 }
 
 .sidebar ul {
@@ -149,53 +150,4 @@ a.fsText:hover {
     color: var(--foreground);
 }
 
-.planets {
-    position: absolute;
-    height: 60vmax;
-    width: 60vmax;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-
-    background-color: var(--color2);
-}
-
-@-webkit-keyframes orbit {
-    from    { -webkit-transform: rotate(0deg) translateX(150px) rotate(0deg); }
-    to      { -webkit-transform: rotate(360deg) translateX(150px) rotate(360deg); }
-}
-@-moz-keyframes orbit {
-    from    { -moz-transform: rotate(0deg) translateX(150px) rotate(0deg); }
-    to      { -moz-transform: rotate(360deg) translateX(150px) rotate(360deg); }
-}
-@-o-keyframes orbit {
-    from    { -o-transform: rotate(0deg) translateX(150px) rotate(0deg); }
-    to      { -o-transform: rotate(360deg) translateX(150px) rotate(360deg); }
-}
-@keyframes orbit {
-    from    { transform: rotate(0deg) translateX(150px) rotate(0deg); }
-    to      { transform: rotate(360deg) translateX(150px) rotate(360deg); }
-}
-
-.planet {
-    position: absolute;
-    width: 25px;
-    height: 25px;
-
-    border-radius: 50%;
-
-    display: inline-block;
-
-    -moz-animation:     orbit 4s linear infinite;
-    animation:          orbit 4s linear infinite;
-}
-
-#earth {
-
-    background-color: var(--color4);
-    left: 150px;
-    top: 150px;
-
-    /* first rotate is orbital angle, second rotation undoes it to keep the planet upright */
-    transform: rotate(45deg) translateX(100px) rotate(-45deg);
-}
+#include planets.css

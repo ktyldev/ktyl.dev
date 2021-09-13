@@ -1,0 +1,22 @@
+.planets {
+    overflow: hidden;
+    position: absolute;
+    height: 80vmax;
+    width: 80vmax;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+
+    background-color: var(--background);
+}
+
+.planet {
+    position: absolute;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#include mercury.css
+#include earth.css
+#include venus.css
+#include mars.css
