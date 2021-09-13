@@ -15,7 +15,7 @@ run: $(HTML_TARGETS) $(CSS_TARGETS)
 
 $(OUT_DIR)/%.html: $(ROOT_DIR)/%.html $(HTML_INCLUDES)
 	mkdir -p $(OUT_DIR)
-	python ppp.py $< $(HTML_INCLUDES) > $@
+	python ppp/ppp.py $< $(HTML_INCLUDES) > $@
 
 $(OUT_DIR)/%.css: $(ROOT_DIR)/%.css
 	cp $< $@
