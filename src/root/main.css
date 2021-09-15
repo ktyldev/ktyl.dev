@@ -73,6 +73,7 @@ a.fsText:hover {
     width: max(30vmax,500px);
     left:50%;
     top:var(--title-height);
+    margin-top: 40px;
     padding: 10px 0 50px;
     background-color: var(--foreground-inactive);
 
@@ -99,7 +100,7 @@ a.fsText:hover {
     position: absolute;
     left: 15px;
     width: max(11vmax, 180px);
-    top:var(--title-height);
+    top: max(var(--title-height), 25%);
     bottom:0;
 
     background-color: var(--background);
@@ -109,7 +110,6 @@ a.fsText:hover {
 .sidebarContent {
     position: relative;
     background-color: var(--background);
-    padding-top: 5%;
 }
 
 .sidebar ul {
@@ -120,7 +120,7 @@ a.fsText:hover {
 
 .sidebar li {
     display: block;
-    margin: 5px 0 0 0;
+    margin: 15px 0 0 0;
 }
 
 .sidebar li a {

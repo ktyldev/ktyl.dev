@@ -16,7 +16,7 @@
 }
 #venus {
     --period: 12.3s;
-    --radius: 70px;
+    --radius: #pr_venus.css;
     --color: #eed053;
 
     width: var(--radius);
@@ -30,4 +30,17 @@
     -moz-animation:     orbit_venus var(--period) linear infinite;
     -o-animation:       orbit_venus var(--period) linear infinite;
     animation:          orbit_venus var(--period) linear infinite;
+}
+#venus-orbit {
+    --orbit-radius: #or_venus.css;
+    --planet-radius: #pr_venus.css;
+    --orbit-thickness: #orbit_thickness.css;
+    --diameter: calc(2 * var(--orbit-radius) + (var(--planet-radius) - var(--orbit-thickness)) / 2);
+
+    right:      #solposx.css;
+    bottom:     #solposy.css;
+    transform:  translate(#or_venus.css, #or_venus.css);
+
+    width:  var(--diameter);
+    height: var(--diameter);
 }

@@ -16,7 +16,7 @@
 }
 #earth {
     --period: 20s;
-    --radius: 80px;
+    --radius: #pr_earth.css;
     --color: #87ceeb;
 
     width: var(--radius);
@@ -30,4 +30,17 @@
     -moz-animation:     orbit_earth var(--period) linear infinite;
     -o-animation:       orbit_earth var(--period) linear infinite;
     animation:          orbit_earth var(--period) linear infinite;
+}
+#earth-orbit {
+    --orbit-radius: #or_earth.css;
+    --planet-radius: #pr_earth.css;
+    --orbit-thickness: #orbit_thickness.css;
+    --diameter: calc(2 * var(--orbit-radius) + (var(--planet-radius) - var(--orbit-thickness)) / 2);
+
+    right:      #solposx.css;
+    bottom:     #solposy.css;
+    transform:  translate(#or_earth.css, #or_earth.css);
+
+    width:  var(--diameter);
+    height: var(--diameter);
 }

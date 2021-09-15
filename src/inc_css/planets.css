@@ -7,13 +7,25 @@
     bottom: 0;
     z-index: -1;
 
-    background-color: var(--background);
+    /*background-color: var(--background);*/
+    background-color: transparent;
 }
 
 .planet {
     position: absolute;
     border-radius: 50%;
     display: inline-block;
+}
+
+.orbit {
+    position: absolute;
+
+    border: #orbit_thickness.css solid var(--foreground-inactive);
+    border-radius: 100%;
+    background-color: transparent;
+    opacity: 0.2;
+
+    z-index:-1;
 }
 
 #include mercury.css

@@ -16,7 +16,7 @@
 }
 #mercury {
     --period: 4.82s;
-    --radius: 40px;
+    --radius: #pr_mercury.css;
     --color: #c89d7c;
 
     width: var(--radius);
@@ -30,4 +30,17 @@
     -moz-animation:     orbit_mercury var(--period) linear infinite;
     -o-animation:       orbit_mercury var(--period) linear infinite;
     animation:          orbit_mercury var(--period) linear infinite;
+}
+#mercury-orbit {
+    --orbit-radius: #or_mercury.css;
+    --planet-radius: #pr_mercury.css;
+    --orbit-thickness: #orbit_thickness.css;
+    --diameter: calc(2 * var(--orbit-radius) + (var(--planet-radius) - var(--orbit-thickness)) / 2);
+
+    right:      #solposx.css;
+    bottom:     #solposy.css;
+    transform:  translate(#or_mercury.css, #or_mercury.css);
+
+    width:  var(--diameter);
+    height: var(--diameter);
 }

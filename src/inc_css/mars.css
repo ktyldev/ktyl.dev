@@ -6,7 +6,7 @@
     from    { -moz-transform: rotate(360deg) translateX(#or_mars.css) rotate(360deg); }
     to      { -moz-transform: rotate(0deg) translateX(#or_mars.css) rotate(0deg); }
 }
-@-o-keyframes orbit_mars {
+@-o-keyframes orbit_mars{
     from    { -o-transform: rotate(360deg) translateX(#or_mars.css) rotate(360deg); }
     to      { -o-transform: rotate(0deg) translateX(#or_mars.css) rotate(0deg); }
 }
@@ -16,7 +16,7 @@
 }
 #mars {
     --period: 37.6s;
-    --radius: 40px;
+    --radius: #pr_mars.css;
     --color: #ff5349;
 
     width: var(--radius);
@@ -30,4 +30,17 @@
     -moz-animation:     orbit_mars var(--period) linear infinite;
     -o-animation:       orbit_mars var(--period) linear infinite;
     animation:          orbit_mars var(--period) linear infinite;
+}
+#mars-orbit {
+    --orbit-radius: #or_mars.css;
+    --planet-radius: #pr_mars.css;
+    --orbit-thickness: #orbit_thickness.css;
+    --diameter: calc(2 * var(--orbit-radius) + (var(--planet-radius) - var(--orbit-thickness)) / 2);
+
+    right:      #solposx.css;
+    bottom:     #solposy.css;
+    transform:  translate(#or_mars.css, #or_mars.css);
+
+    width:  var(--diameter);
+    height: var(--diameter);
 }
