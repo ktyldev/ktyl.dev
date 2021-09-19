@@ -12,8 +12,19 @@ body {
 }
 
 .title {
+    position: relative;
+
+    margin-top: 40px;
     margin-left: 80px;
     font-size: 1.4em;
+}
+
+.title a {
+    transition: color 0.3s;
+}
+
+.title a:hover {
+    color: lightpink;
 }
 
 h1 {
@@ -57,7 +68,7 @@ a.fsText {
 
 a.fsText:hover {
     background-color: var(--background);
-    color: var(--foreground);
+    color: var(--accent);
 
     transform: scale(1.1, 1);
 }
@@ -137,17 +148,18 @@ a.fsText:hover {
 .socials i {
     font-size: 2em;
     margin-left: 4px;
+    color: var(--foreground-inactive);
+    transition: transform 0.3s, color 0.3s;
+}
+.socials i:hover {
+    color: var(--accent);
+    transform: translateY(-20%);
 }
 
 .socials a {
-    color: var(--foreground-inactive);
     text-decoration: none;
 
     transition: color 0.3s;
-}
-
-.socials a:hover {
-    color: var(--foreground);
 }
 
 #include planets.css
