@@ -162,4 +162,5 @@ a.fsText:hover {
     transition: color 0.3s;
 }
 
+#include demos.css
 #include planets.css

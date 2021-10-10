@@ -1,0 +1,18 @@
+.demoTile {
+    opacity: 0.3;
+    transition: opacity 0.3s;
+    max-width: 15vw;
+    display: inline;
+}
+
+.demoTile:hover {
+    opacity: 1.0;
+}
+
+.demoTiles {
+    position: absolute;
+    background-color:white;
+    left:27.5%;
+    top: var(--title-height);
+    margin-top:40px;
+}
