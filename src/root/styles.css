@@ -79,7 +79,7 @@ a.fsText:hover {
     color: var(--foreground);
 }
 
-.column {
+.page {
     position: absolute;
     width: max(30vmax,500px);
     left:50%;
@@ -91,14 +91,14 @@ a.fsText:hover {
     transform: translate(-50%, 0);
 }
 
-.column p {
+.page p {
     margin: 0 40px;
     padding-top: 20px;
     color: var(--background);
     opacity: 1.0;
 }
 
-.column h1 {
+.page h1 {
     color: var(--background);
 
     padding-left: 60px;
