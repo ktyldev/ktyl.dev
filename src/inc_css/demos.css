@@ -2,7 +2,7 @@
     opacity: 0.3;
     transition: opacity 0.3s;
     max-width: 15vw;
-    display: inline;
+    display: inline-block;
 }
 
 .demoTile:hover {

@@ -86,7 +86,7 @@ a.fsText:hover {
     top:var(--title-height);
     margin-top: 40px;
     padding: 10px 0 50px;
-    background-color: var(--foreground-inactive);
+    /*background-color: var(--foreground-inactive);*/
 
     transform: translate(-50%, 0);
 }
@@ -94,12 +94,12 @@ a.fsText:hover {
 .page p {
     margin: 0 40px;
     padding-top: 20px;
-    color: var(--background);
+    color: var(--foreground);
     opacity: 1.0;
 }
 
 .page h1 {
-    color: var(--background);
+    color: var(--foreground-inactive);
 
     padding-left: 60px;
     padding-top: 10px;
@@ -111,7 +111,7 @@ a.fsText:hover {
     position: absolute;
     left: 15px;
     width: max(11vmax, 180px);
-    top: max(var(--title-height), 25%);
+    top: max(var(--title-height), 15%);
     bottom:0;
 
     background-color: var(--background);
@@ -162,5 +162,5 @@ a.fsText:hover {
     transition: color 0.3s;
 }
 
-#include demos.css
+#include portfolio.css
 #include planets.css
