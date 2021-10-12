@@ -43,4 +43,6 @@
 
     width:  var(--diameter);
     height: var(--diameter);
+
+    opacity: 0.065;
 }
