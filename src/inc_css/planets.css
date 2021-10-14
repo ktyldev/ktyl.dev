@@ -15,15 +15,17 @@
     position: absolute;
     border-radius: 50%;
     display: inline-block;
+
+    width: var(--radius);
+    height: var(--radius);
 }
 
 .orbit {
     position: absolute;
 
-    border: #orbit_thickness.css solid var(--foreground-inactive);
+    /*border: #orbit_thickness.css solid var(--foreground-inactive);*/
     border-radius: 100%;
     background-color: transparent;
-    opacity: 0.2;
 
     z-index:-1;
 }

@@ -16,8 +16,8 @@
 }
 #mercury {
     --period: 4.82s;
-    --radius: #pr_mercury.css;
-    --color: #c89d7c;
+    --radius: 30px;
+    --color: var(--background-alt);
 
     width: var(--radius);
     height: var(--radius);
@@ -43,4 +43,6 @@
 
     width:  var(--diameter);
     height: var(--diameter);
+
+    border: #orbit_thickness.css solid var(--background-alt);
 }

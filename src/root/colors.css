@@ -1,6 +1,7 @@
 :root {
     /* Special */
     --background: #eee;
+    --background-alt: #ccc;
     --foreground: #222;
     --foreground-inactive: #777;
     --accent: lightpink;

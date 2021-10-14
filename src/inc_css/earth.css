@@ -17,7 +17,7 @@
 #earth {
     --period: 20s;
     --radius: #pr_earth.css;
-    --color: #87ceeb;
+    --color: var(--background-alt);
 
     width: var(--radius);
     height: var(--radius);
@@ -44,5 +44,5 @@
     width:  var(--diameter);
     height: var(--diameter);
 
-    opacity: 0.065;
+    border: #orbit_thickness.css solid var(--background-alt);
 }

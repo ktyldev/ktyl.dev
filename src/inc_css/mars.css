@@ -17,7 +17,7 @@
 #mars {
     --period: 37.6s;
     --radius: #pr_mars.css;
-    --color: #ff5349;
+    --color: var(--background-alt);
 
     width: var(--radius);
     height: var(--radius);
@@ -44,5 +44,5 @@
     width:  var(--diameter);
     height: var(--diameter);
 
-    opacity: 0.05;
+    border: #orbit_thickness.css solid var(--background-alt);
 }

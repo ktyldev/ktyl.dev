@@ -17,7 +17,7 @@
 #venus {
     --period: 12.3s;
     --radius: #pr_venus.css;
-    --color: #eed053;
+    --color: var(--background-alt);
 
     width: var(--radius);
     height: var(--radius);
@@ -43,6 +43,5 @@
 
     width:  var(--diameter);
     height: var(--diameter);
-
-    opacity: 0.1;
+    border: #orbit_thickness.css solid var(--background-alt);
 }
