@@ -1,0 +1,22 @@
+.socials {
+    margin-top: 16px;
+    margin-left: 10px;
+    background-color:var(--background);
+}
+
+.socials i {
+    font-size: 2em;
+    margin-left: 4px;
+    color: var(--foreground-inactive);
+    transition: transform 0.3s, color 0.3s;
+}
+.socials i:hover {
+    color: var(--accent);
+    transform: translateY(-20%);
+}
+
+.socials a {
+    text-decoration: none;
+
+    transition: color 0.3s;
+}
