@@ -4,11 +4,13 @@
 #include header.html
 
 <body>
-<div class="title">
-    <h1 class="fsText"><a href="index.html">ktyl@website</a>/contact</h1>
-</div>
 
-    #include sidebar.html
+#include titlestart.html
+/contact
+#include titleend.html
+
+#include sidebar.html
+#include planets.html
 
 </body>
 

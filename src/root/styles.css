@@ -13,7 +13,6 @@ body {
 
 .title {
     position: relative;
-
     margin-top: 40px;
     margin-left: 80px;
     font-size: 1.4em;
@@ -21,10 +20,17 @@ body {
 
 .title a {
     transition: color 0.3s;
+    color: var(--foreground-active);
+
 }
 
 .title a:hover {
     color: lightpink;
+}
+
+.pageTitle {
+    margin-left: -0.15em;
+    color: var(--foreground-inactive);
 }
 
 h1 {
