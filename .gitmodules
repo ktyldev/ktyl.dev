@@ -1,3 +1,6 @@
 [submodule "ppp"]
 	path = ppp
 	url = https://github.com/ktyldev/ppp
+[submodule "blog"]
+	path = blog
+	url = https://github.com/ktyldev/blog.git
