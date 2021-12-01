@@ -1,0 +1,33 @@
+.sidebar {
+    position: absolute;
+    left: 15px;
+    width: max(11vmax, 180px);
+    top: var(--title-height);
+    bottom:0;
+
+    padding-top: 1em;
+
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+.sidebarContent {
+    position: relative;
+    background-color: var(--background);
+}
+
+.sidebar ul {
+    position: relative;
+    background-color: var(--background);
+    padding-left: 30px;
+}
+
+.sidebar li {
+    display: block;
+    margin: 15px 0 0 0;
+}
+
+.sidebar li a {
+    padding: 0 0;
+    margin-left: -20px;
+}

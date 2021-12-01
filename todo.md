@@ -1,13 +1,25 @@
 * [x] header
     * [x] differentiate page name from site name
 * [ ] footer
-* [ ] gallery
-    * [ ] hover anim
-        * [ ] add grayscale color shift
-        * [ ] no (or maybe just less) scale
+* [-] gallery
+    * [x] hover anim
+        * [x] add grayscale color shift
+        * [x] no (or maybe just less) scale
+    * [-] sections
+        * [x] rtx
+        * [x] jems
+        * [-] abstract
+        * [ ] nature
+        * [ ] pets
     * [ ] column formatting on all screen sizes
-    * [ ] add some camera pics
     * [ ] thumbnails
+    * [x] add some context
+        * [x] titles
+        * [x] subtitles
+    * [ ] link somewhere
+    * [ ] metadata
+        * [ ] title of project
+        * [ ] tiny desc
 * [ ] about
 * [ ] blog
     * [ ] example post
@@ -15,3 +27,5 @@
 * [ ] socials
 * [ ] planets
 * [ ] sidebar
+    * [ ] incorporate title
+    * [ ] incorporate socials

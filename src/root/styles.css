@@ -34,7 +34,6 @@ body {
 }
 
 h1 {
-    font-size: var(--font-size);
     color: var(--color1);
     padding-bottom: 0;
     margin-bottom:0;
@@ -90,15 +89,15 @@ a.fsText:hover {
     width: max(30vmax,500px);
     left:50%;
     top:var(--title-height);
-    margin-top: 40px;
-    padding: 10px 0 50px;
+    margin-top: 1em;
+    padding: 0px 0 50px;
     /*background-color: var(--foreground-inactive);*/
 
     transform: translate(-50%, 0);
 }
 
 .page p {
-    margin: 0 40px;
+    margin: 0 0px;
     padding-top: 20px;
     color: var(--foreground);
     opacity: 1.0;
@@ -107,44 +106,11 @@ a.fsText:hover {
 .page h1 {
     color: var(--foreground-inactive);
 
-    padding-left: 60px;
-    padding-top: 10px;
     font-size: 1.3em;
     font-weight: bold;
 }
 
-.sidebar {
-    position: absolute;
-    left: 15px;
-    width: max(11vmax, 180px);
-    top: max(var(--title-height), 15%);
-    bottom:0;
-
-    background-color: var(--background);
-    color: var(--foreground);
-}
-
-.sidebarContent {
-    position: relative;
-    background-color: var(--background);
-}
-
-.sidebar ul {
-    position: relative;
-    background-color: var(--background);
-    padding-left: 30px;
-}
-
-.sidebar li {
-    display: block;
-    margin: 15px 0 0 0;
-}
-
-.sidebar li a {
-    padding: 0 0;
-    margin-left: -20px;
-}
-
+#include sidebar.css
 #include socials.css
 #include portfolio.css
 #include planets.css
