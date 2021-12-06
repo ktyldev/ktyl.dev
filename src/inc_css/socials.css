@@ -1,7 +1,11 @@
 .socials {
+    position: absolute;
+
     margin-top: 16px;
     margin-left: 10px;
     background-color:var(--background);
+
+    bottom: 1em;
 }
 
 .socials i {
@@ -12,7 +16,7 @@
 }
 .socials i:hover {
     color: var(--accent);
-    transform: translateY(-20%);
+    transform: translateY(-10%);
 }
 
 .socials a {

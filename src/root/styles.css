@@ -7,15 +7,14 @@
 
 body {
     font-family: 'Ubuntu', sans-serif;
+    margin: 0;
 
     background-color: var(--background);
 }
 
 .title {
-    position: relative;
-    margin-top: 40px;
-    margin-left: 80px;
-    font-size: 1.4em;
+    margin-left: 5px;
+    font-size: 1em;
 }
 
 .title a {
@@ -37,6 +36,7 @@ h1 {
     color: var(--color1);
     padding-bottom: 0;
     margin-bottom:0;
+    margin-top:0;
 }
 
 ul {
@@ -46,21 +46,11 @@ ul {
 
 li {
     display:inline;
-    /*padding-left: 1em;*/
-    transition: transform 0.2s;
-}
-
-li:hover {
-    transform: translate(10px);
 }
 
 a.fsText {
-    position:relative;
     text-decoration: none;
-    background-color: var(--background);
     color: var(--foreground-inactive);
-
-    padding: 0 6px;
 
     transform: scale(1);
     transition: background-color 0.2s, color 0.2s, transform 0.2s;
@@ -72,14 +62,11 @@ a.fsText {
 }
 
 a.fsText:hover {
-    background-color: var(--background);
-    color: var(--accent);
-
-    transform: scale(1.1, 1);
+    /*color: var(--accent);*/
 }
 
 .fsText {
-    --font-size: 1.6em;
+    --font-size: 1.4em;
     font-size: var(--font-size);
     color: var(--foreground);
 }
@@ -88,7 +75,7 @@ a.fsText:hover {
     position: absolute;
     width: max(30vmax,500px);
     left:50%;
-    top:var(--title-height);
+    top:0;
     margin-top: 1em;
     padding: 0px 0 50px;
     /*background-color: var(--foreground-inactive);*/

@@ -1,6 +1,10 @@
 * [x] header
     * [x] differentiate page name from site name
+* [x] sidebar
+    * [x] incorporate title
+    * [x] incorporate socials
 * [ ] footer
+    * [ ] made by me
 * [-] gallery
     * [x] hover anim
         * [x] add grayscale color shift
@@ -26,6 +30,3 @@
 * [ ] contact
 * [ ] socials
 * [ ] planets
-* [ ] sidebar
-    * [ ] incorporate title
-    * [ ] incorporate socials
