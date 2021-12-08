@@ -1,8 +1,8 @@
 * [x] header
     * [x] differentiate page name from site name
 * [x] sidebar
-    * [x] incorporate title
-    * [x] incorporate socials
+    * [x] title
+    * [x] socials
 * [ ] footer
     * [ ] made by me
 * [-] gallery
