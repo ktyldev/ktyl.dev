@@ -25,8 +25,8 @@
         * [ ] title of project
         * [ ] tiny desc
 * [ ] about
-* [ ] blog
-    * [ ] example post
 * [ ] contact
 * [ ] socials
 * [ ] planets
+* [ ] deploy
+    * [ ] github actions pipeline?
