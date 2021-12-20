@@ -12,20 +12,8 @@ body {
     background-color: var(--background);
 }
 
-.title {
-    margin-left: 5px;
-    font-size: 1em;
-}
-
-.title a {
-    transition: color 0.3s;
-    color: var(--foreground-active);
-
-}
-
-.title a:hover {
-    color: lightpink;
-}
+#include title.css
+#include sidebar.css
 
 .pageTitle {
     margin-left: -0.15em;
@@ -98,7 +86,6 @@ a.fsText:hover {
     font-weight: bold;
 }
 
-#include sidebar.css
 #include socials.css
 #include portfolio.css
 #include planets.css

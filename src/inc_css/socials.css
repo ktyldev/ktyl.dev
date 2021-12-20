@@ -1,16 +1,13 @@
 .socials {
     position: absolute;
 
-    margin-top: 16px;
-    margin-left: 10px;
     background-color:var(--background);
 
-    bottom: 1em;
+    bottom: 1.6em;
 }
 
 .socials i {
     font-size: 2em;
-    margin-left: 4px;
     color: var(--foreground-inactive);
     transition: transform 0.3s, color 0.3s;
 }
@@ -21,6 +18,5 @@
 
 .socials a {
     text-decoration: none;
-
     transition: color 0.3s;
 }

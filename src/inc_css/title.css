@@ -1,0 +1,12 @@
+.title {
+    font-size: 1em;
+}
+
+.title a {
+    transition: color 0.3s;
+    color: var(--foreground-active);
+}
+
+.title a:hover {
+    color: lightpink;
+}

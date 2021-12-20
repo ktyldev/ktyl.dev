@@ -5,7 +5,7 @@
     bottom:0;
 
     padding-top: 2em;
-    padding-left: 1vw;
+    padding-left: 2em;
 
     background-color: var(--background);
     color: var(--foreground);
@@ -13,26 +13,23 @@
 
 .sidebarContent {
     position: relative;
-    /*background-color: var(--background);*/
 }
 
 .sidebar ul {
     position: relative;
-    /*background-color: var(--background);*/
 
     padding-top: 2em;
     padding-bottom: 1em;
-    /*margin-left: 1vmax;*/
 
-    padding-left:1vmax;
-    width: 85%;
+    padding-left:0;
+    width: 80%;
 }
 
 .sidebar li {
     display: block;
-    margin: 0 0 11px  0;
+    margin-bottom: 0.8em;
 
-    transition: transform 0.2s;
+    transition: transform 0.3s;
 }
 
 .sidebar li:hover {
@@ -42,14 +39,14 @@
 .sidebar li a {
     display: block;
     padding: 2px;
-    background-color: rgba(0,0,0,0);
+    background-color: var(--clear);
 
     transition: background-color 0.5s;
 }
 
 .sidebar li a:hover {
     color: var(--foreground);
-    background-color: var(--background-alt);
+    background-color: var(--foreground-alt);
 }
 
 

@@ -5,6 +5,7 @@
     --foreground: #222;
     --foreground-inactive: #777;
     --accent: lightpink;
+    --clear: rgba(0,0,0,0);
 
     /* Colors */
     --color0: #0000ff;
