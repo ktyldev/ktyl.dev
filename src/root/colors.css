@@ -1,8 +1,8 @@
 :root {
     /* Special */
     --background: #eee;
-    --background-alt: #ccc;
-    --foreground: #222;
+    --background-alt: #b8b8b8;
+    --foreground: #444;
     --foreground-inactive: #777;
     --accent: lightpink;
     --clear: rgba(0,0,0,0);
