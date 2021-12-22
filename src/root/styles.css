@@ -15,6 +15,7 @@ body {
 #include title.css
 #include sidebar.css
 #include landing.css
+#include blog.css
 
 .pageTitle {
     margin-left: -0.15em;
@@ -40,7 +41,6 @@ li {
 a.fsText {
     text-decoration: none;
     color: var(--foreground-inactive);
-
     transform: scale(1);
     transition: background-color 0.2s, color 0.2s, transform 0.2s;
 }
@@ -48,10 +48,6 @@ a.fsText {
 .fsText a {
     text-decoration: none;
     color: var(--foreground);
-}
-
-a.fsText:hover {
-    /*color: var(--accent);*/
 }
 
 .fsText {
@@ -65,10 +61,8 @@ a.fsText:hover {
     width: max(30vmax,500px);
     left:50%;
     top:0;
-    /*margin-top: 1em;*/
     padding: 0px 0 50px;
     padding-top: 5vh;
-    /*background-color: var(--foreground-inactive);*/
 
     transform: translate(-50%, 0);
 }
