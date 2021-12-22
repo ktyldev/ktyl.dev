@@ -4,3 +4,6 @@
 [submodule "blog"]
 	path = blog
 	url = https://github.com/ktyldev/blog.git
+[submodule "cv"]
+	path = cv
+	url = https://gitlab.com/ktyldev/cv.git
