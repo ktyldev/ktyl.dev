@@ -1,26 +1,16 @@
-* [x] header
-    * [x] differentiate page name from site name
-* [x] sidebar
-    * [x] title
-    * [x] socials
+* [ ] header
+    * [ ] sticky slidy from middle to side with scroll
+* [ ] sidebar
 * [ ] footer
+    * [ ] integrate solar system
+    * [ ] fade out along bottom edge
     * [ ] made by me
-* [-] gallery
-    * [x] hover anim
-        * [x] add grayscale color shift
-        * [x] no (or maybe just less) scale
-    * [-] sections
-        * [x] rtx
-        * [x] jems
-        * [-] abstract
+* [ ] gallery
+    * [ ] sections
         * [ ] nature
         * [ ] pets
     * [ ] column formatting on all screen sizes
     * [ ] thumbnails
-    * [x] add some context
-        * [x] titles
-        * [x] subtitles
-    * [ ] link somewhere
     * [ ] metadata
         * [ ] title of project
         * [ ] tiny desc
@@ -28,5 +18,7 @@
 * [ ] contact
 * [ ] socials
 * [ ] planets
+* [ ] build
+    * [ ] strip comments
 * [ ] deploy
     * [ ] github actions pipeline?
