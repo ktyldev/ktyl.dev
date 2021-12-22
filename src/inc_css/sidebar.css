@@ -45,8 +45,7 @@
 }
 
 .sidebar li a:hover {
-    color: var(--foreground);
-    background-color: var(--foreground-alt);
+    color: var(--accent);
 }
 
 

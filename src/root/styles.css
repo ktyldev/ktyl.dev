@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap');
 @import 'colors.css';
 
 :root {
@@ -64,7 +64,7 @@ a.fsText:hover {
     width: max(30vmax,500px);
     left:50%;
     top:0;
-    margin-top: 1em;
+    /*margin-top: 1em;*/
     padding: 0px 0 50px;
     padding-top: 5vh;
     /*background-color: var(--foreground-inactive);*/
@@ -79,6 +79,7 @@ a.fsText:hover {
     color: var(--foreground);
 
     font-size: 1.1em;
+    /*font-weight: bold;*/
 
     line-height: 1.25em;
 
@@ -94,8 +95,7 @@ a.fsText:hover {
 .page h1 {
     color: var(--foreground-inactive);
 
-    font-size: 1.5em;
-    font-weight: bold;
+    font-size: 1.7em;
 
     margin: .5em;
 }

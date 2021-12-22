@@ -1,20 +1,12 @@
-.demoTile {
-    /*opacity: 0.7;*/
+.tileCover {
+    width: 100%;
+    height: 100%;
+    opacity: 0.0;
     transition: opacity 0.3s;
-    max-width: 15vw;
-    display: inline;
 }
 
-.demoTile:hover {
-    /*opacity: 1.0;*/
-}
-
-.demoTiles {
-    position: absolute;
-    background-color:white;
-    /*left:27.5%;*/
-    top: var(--title-height);
-    margin-top:40px;
+.tileCover:hover {
+    opacity: 1.0;
 }
 
 .page.portfolio {
@@ -30,12 +22,28 @@
 .portfolio h1 {
     margin-top: 1.2em;
     text-align: center;
+
+    padding: 0.2em 0.4em;
 }
 
 .portfolio p {
-    background-color: var(--clear);
-    border-style: none;
+    margin: 1.2em 0 2em;
+
     text-align: center;
+    border-style: none;
+
+    background-color: var(--clear);
+}
+
+.glass {
+    padding: 0.4em 0.6em;
+    color: var(--foreground-inactive);
+    background-color: var(--background);
+    opacity:0.9;
+
+    border-style:solid;
+    border-radius:2em;
+    border-color:var(--clear);
 }
 
 /* gallery img */
@@ -43,15 +51,86 @@
     margin-top: 1em;
     width: 100%;
     height: 100%;
-    background-color: transparent;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+.wrapper .imgHolder {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
 .wrapper img {
+    pointer-events: none;
+    box-sizing: border-box;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.1s ease-in;
+    left: auto;
+    right: auto;
+
+    transition: all 0.2s ease-out;
 }
-.wrapper img:hover {
+
+.wrapper .imgHolder span {
+    position:absolute;
+    top:50%;
+    left:1em;
+    right:1em;
+
+    transform: translateY(-50%) scale(0.6);
+    text-align: center;
+
+    opacity: 0;
+    transition: all 0.3s;
+
+    color: var(--accent);
+}
+
+.wrapper .imgHolder span p {
+    padding:0;
+    margin:0;
+    opacity: 1;
+    color: var(--background);
+}
+
+.wrapper .imgHolder span a {
+    opacity: 1;
+    padding: .5em 0;
+    color: var(--background);
+    transition: all 0.1s;
+    text-decoration: none;
+}
+.wrapper .imgHolder span a:hover {
+    color: var(--accent);
+}
+
+.wrapper .imgHolder span i {
+    padding: 0 0.1em;
+    margin-top: .3em;
+    font-size: 2em;
+    color: var(--background);
+    transition: all 0.3s;
+}
+.wrapper .imgHolder span i:hover {
+    transform:translateY(-10%);
+    color:var(--accent);
+}
+
+.wrapper .imgHolder:hover span {
+    transform: translateY(-50%);
+    opacity:1;
+}
+
+.lightTileText {
+    color: var(--background);
+}
+
+.wrapper .imgHolder:hover img {
+    border-style: solid;
+    border-width: 0;
+    border-radius: 100%;
+    border-color: var(--foreground);
+
+    filter: saturate(20) brightness(.5) blur(2px);
 }

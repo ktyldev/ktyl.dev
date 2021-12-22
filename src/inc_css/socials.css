@@ -8,10 +8,12 @@
 
 .socials i {
     font-size: 2em;
+    padding-right: .05em;
     color: var(--foreground-inactive);
     transition: transform 0.3s, color 0.3s;
 }
 .socials i:hover {
+
     color: var(--accent);
     transform: translateY(-10%);
 }

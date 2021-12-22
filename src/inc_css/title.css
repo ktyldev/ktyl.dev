@@ -3,10 +3,11 @@
 }
 
 .title a {
-    transition: color 0.3s;
+    transition: all 0.1s ease-in;
     color: var(--foreground-active);
 }
 
 .title a:hover {
-    color: lightpink;
+    color: var(--accent);
+    transform: translateY(50%);
 }
