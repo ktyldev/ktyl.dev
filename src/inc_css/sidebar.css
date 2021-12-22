@@ -32,6 +32,10 @@
     transition: transform 0.3s;
 }
 
+.sidebar li a::before {
+    content: "/";
+}
+
 .sidebar li:hover {
     transform: translate(1vmax);
 }

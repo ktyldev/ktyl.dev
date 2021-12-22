@@ -1,0 +1,50 @@
+.landing {
+    margin-top: 10%;
+
+    text-align: center;
+}
+
+.landing .fsText a {
+    color: var(--foreground-inactive);
+    font-size: 2em;
+    transform: translate(0,50%);
+
+    transition: all 0.3s;
+}
+.landing .fsText a:hover {
+    color: var(--accent);
+}
+
+.landing ul {
+    width: 100%;
+    padding: .5em 0 0;
+    margin: 0;
+}
+
+.landing li a {
+    position: relative;
+    font-size: 2.5em;
+    margin: 0 .2em;
+    color: var(--foreground-inactive);
+}
+.landing li a:hover {
+    transform: translateY(-10%);
+    color: var(--accent);
+}
+
+.landing .socials {
+    position: relative;
+    background-color: var(--clear);
+
+    top: 1em;
+    left: auto;
+    right: auto;
+
+    text-align: center;
+}
+
+.landing .socials i {
+    color: var(--foreground-inactive);
+    font-size: 3.5em;
+    padding: 0 .07em;
+}
