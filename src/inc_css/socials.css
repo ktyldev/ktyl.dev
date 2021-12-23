@@ -7,8 +7,8 @@
 }
 
 .socials i {
-    font-size: 2em;
-    padding-right: .05em;
+    font-size: 2.0em;
+    padding-right: .1em;
     color: var(--foreground-inactive);
     transition: transform 0.3s, color 0.3s;
 }
