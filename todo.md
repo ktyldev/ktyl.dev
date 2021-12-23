@@ -1,5 +1,16 @@
 * [ ] responsive design
-    * [ ] solar system cut off at top
+    * [ ] sidebar
+        * [ ] rename to nav
+        * [ ] should also be a top bar
+        * [ ] text bigger
+    * [ ] landing page
+        * [ ] smaller
+        * [ ] central
+    * [ ] about
+        * [ ] narrow text
+        * [ ] hope -> use
+    * [ ] solar system
+        * [ ] smaller
     * [ ] gallery
         * [ ] column too thin
 * [ ] header
