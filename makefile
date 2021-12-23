@@ -18,8 +18,14 @@ HTML_TARGETS 	= $(PAGES:$(ROOT_DIR)/%.html=$(OUT_DIR)/%.html)
 CSS_TARGETS 	= $(STYLES:$(ROOT_DIR)/%.css=$(OUT_DIR)/%.css)
 PNG_TARGETS		= $(IMG_DIR)/%.png=$(OUT_DIR)/%.png
 
-run: $(HTML_TARGETS) $(CSS_TARGETS)
+run: $(HTML_TARGETS) $(CSS_TARGETS) $(OUT_DIR)/cv.pdf
 	cp $(IMG_DIR)/*.png $(OUT_DIR)/
+	cd cv && pdflatex main.tex
+
+$(OUT_DIR)/cv.pdf:
+	mkdir -p $(OUT_DIR)
+	cd cv && latexmk main.tex
+	cp cv/main.pdf $@
 
 $(OUT_DIR)/%.html: $(ROOT_DIR)/%.html $(HTML_INCLUDES)
 	mkdir -p $(OUT_DIR)
