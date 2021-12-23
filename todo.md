@@ -1,3 +1,7 @@
+* [ ] responsive design
+    * [ ] solar system cut off at top
+    * [ ] gallery
+        * [ ] column too thin
 * [ ] header
     * [ ] sticky slidy from middle to side with scroll
 * [ ] sidebar
