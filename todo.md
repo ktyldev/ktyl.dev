@@ -9,8 +9,8 @@
     * [-] landing page
         * [x] central
         * [ ] smaller
-    * [ ] about
-        * [ ] narrow text
+    * [-] about
+        * [x] narrow text
         * [ ] hope -> use
     * [x] solar system
         * [x] smaller
