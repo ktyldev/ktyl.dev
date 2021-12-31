@@ -12,8 +12,8 @@
 }
 @media only screen and (max-width: 600px) {
     .planets {
-        height: 100vmax;
-        width: 100vmax;
+        height: 200vmax;
+        width: 200vmax;
 
         transform: scale(0.5) translate(50%, 50%);
     }
