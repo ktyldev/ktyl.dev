@@ -1,4 +1,4 @@
-.sidebar {
+.nav {
     position: fixed;
     width: max(11vmax, 200px);
     top: 0;
@@ -11,11 +11,7 @@
     color: var(--foreground);
 }
 
-.sidebarContent {
-    position: relative;
-}
-
-.sidebar ul {
+.nav-links {
     position: relative;
 
     padding-top: 2em;
@@ -25,22 +21,22 @@
     width: 80%;
 }
 
-.sidebar li {
+.nav .nav-links li {
     display: block;
     margin-bottom: 0.8em;
 
     transition: transform 0.3s;
 }
 
-.sidebar li a::before {
+.nav li a::before {
     content: "/";
 }
 
-.sidebar li:hover {
+.nav li:hover {
     transform: translate(1vmax);
 }
 
-.sidebar li a {
+.nav li a {
     display: block;
     padding: 2px;
     background-color: var(--clear);
@@ -48,9 +44,47 @@
     transition: background-color 0.5s;
 }
 
-.sidebar li a:hover {
+.nav li a:hover {
     color: var(--accent);
 }
 
+@media only screen and (max-width: 600px) {
+    .nav {
+        position: fixed;
+        width: 100%;
+        padding: 0;
+        z-index: 1;
+        top: 0;
+        height: 2em;
+    }
 
+    .nav .title {
+        padding-top: .5em;
+        padding-left: .5em;
+    }
 
+    .nav .nav-links {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: .5em .5em 0 0;
+        float: right;
+        text-align: right;
+    }
+
+    .nav .nav-links li {
+        display: inline-block;
+    }
+
+    .nav .nav-links li a::before {
+        content: "";
+    }
+
+    .nav .pageTitle {
+        display: none;
+    }
+
+    .nav .socials {
+        display: none;
+    }
+}

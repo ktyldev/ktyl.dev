@@ -1,11 +1,11 @@
 * [-] responsive design
     * [-] nav
         * [x] rename to nav
-        * [ ] should also be a top bar
+        * [x] top bar
+            * [x] no socials
+            * [x] title left (no trail)
+            * [x] page links right (no prefix)
         * [ ] text bigger
-    * [ ] top bar
-        * [ ] no socials
-        * [ ] title left (no trail)
     * [ ] landing page
         * [ ] smaller
         * [ ] central
