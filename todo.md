@@ -1,14 +1,12 @@
 * [-] responsive design
     * [-] nav
-        * [x] rename to nav
+        * [ ] turn into <nav>
         * [x] top bar
             * [x] no socials
             * [x] title left (no trail)
             * [x] page links right (no prefix)
-        * [ ] text bigger
     * [-] landing page
         * [x] central
-        * [ ] smaller
     * [-] about
         * [x] narrow text
         * [ ] hope -> use
