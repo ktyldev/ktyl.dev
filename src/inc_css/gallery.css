@@ -1,14 +1,3 @@
-.tileCover {
-    width: 100%;
-    height: 100%;
-    opacity: 0.0;
-    transition: opacity 0.3s;
-}
-
-.tileCover:hover {
-    opacity: 1.0;
-}
-
 .page.portfolio {
     padding-top: 0;
     width: 50%;
@@ -134,3 +123,35 @@
 
     filter: saturate(20) brightness(.5) blur(2px);
 }
+
+.icon-link {
+}
+
+@media only screen and (max-width: 600px) {
+    .page.portfolio {
+        width: 100%;
+    }
+
+    .wrapper .imgHolder {
+        overflow: hidden;
+    }
+    .wrapper .imgHolder span {
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        transform: none;
+    }
+    .wrapper .imgHolder span a {
+        position: absolute;
+        left:0;
+        width:100%;
+        height:100%;
+    }
+    .icon-link {
+        display: none;
+    }
+    .wrapper .imgHolder span i {
+        /*display: none;*/
+    }

@@ -14,8 +14,8 @@
         * [ ] hope -> use
     * [x] solar system
         * [x] smaller
-    * [ ] gallery
-        * [ ] column too thin
+    * [x] gallery
+        * [x] column too thin
 * [ ] features
     * [ ] header
         * [ ] sticky slidy from middle to side with scroll
