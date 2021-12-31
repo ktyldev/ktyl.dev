@@ -48,3 +48,16 @@
     font-size: 3.5em;
     padding: 0 .07em;
 }
+
+@media only screen and (max-width: 600px) {
+    .landing.page {
+        position: fixed;
+
+        margin: 0;
+        padding: 50% 0 0 0;
+
+        height: 100%;
+
+        /*background-color: blue;*/
+    }
+}

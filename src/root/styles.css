@@ -66,6 +66,12 @@ a.fsText {
 
     transform: translate(-50%, 0);
 }
+@media only screen and (max-width: 600px) {
+    .page {
+        width: 100%;
+        padding: 0;
+    }
+}
 
 .page .textPanel .separator {
     position: relative;

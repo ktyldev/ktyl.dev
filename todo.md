@@ -6,9 +6,9 @@
             * [x] title left (no trail)
             * [x] page links right (no prefix)
         * [ ] text bigger
-    * [ ] landing page
+    * [-] landing page
+        * [x] central
         * [ ] smaller
-        * [ ] central
     * [ ] about
         * [ ] narrow text
         * [ ] hope -> use
