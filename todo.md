@@ -12,8 +12,8 @@
     * [ ] about
         * [ ] narrow text
         * [ ] hope -> use
-    * [ ] solar system
-        * [ ] smaller
+    * [x] solar system
+        * [x] smaller
     * [ ] gallery
         * [ ] column too thin
 * [ ] features
