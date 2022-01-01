@@ -1,19 +1,25 @@
 * [-] responsive design
     * [-] nav
-        * [ ] turn into <nav>
         * [x] top bar
             * [x] no socials
             * [x] title left (no trail)
             * [x] page links right (no prefix)
+        * [ ] turn into <nav>
     * [-] landing page
         * [x] central
-    * [-] about
+        * [ ] move up a squidge to avoid planets intersecting icons
+    * [x] about
         * [x] narrow text
-        * [ ] hope -> use
+        * [x] space out title
     * [x] solar system
         * [x] smaller
-    * [x] gallery
+    * [-] gallery
         * [x] column too thin
+        * [ ] invert media queries for :hover handling
+* [ ] content
+    * [ ] about
+        * [ ] caps in copy: conform to social pressure
+        * [ ] hope -> use
 * [ ] features
     * [ ] header
         * [ ] sticky slidy from middle to side with scroll
