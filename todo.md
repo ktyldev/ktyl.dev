@@ -1,13 +1,13 @@
+
 * [-] responsive design
-    * [-] nav
+    * [x] nav
         * [x] top bar
             * [x] no socials
             * [x] title left (no trail)
             * [x] page links right (no prefix)
-        * [ ] turn into <nav>
-    * [-] landing page
+    * [x] landing page
         * [x] central
-        * [ ] move up a squidge to avoid planets intersecting icons
+        * [x] move up a squidge to avoid planets intersecting icons
     * [x] about
         * [x] narrow text
         * [x] space out title
@@ -16,14 +16,20 @@
     * [-] gallery
         * [x] column too thin
         * [ ] invert media queries for :hover handling
-* [ ] content
-    * [ ] about
-        * [ ] caps in copy: conform to social pressure
-        * [ ] hope -> use
+
+* [x] content
+    * lx] about
+        * [x] hope -> use
+
 * [ ] features
+    * [ ] blog
+        * [ ] parse markdown blog into html
+        * [ ] embed parsed html into templated pages
+
     * [ ] header
         * [ ] sticky slidy from middle to side with scroll
-    * [ ] sidebar
+    * [ ] nav
+        * [ ] turn into <nav>
     * [ ] footer
         * [ ] integrate solar system
         * [ ] fade out along bottom edge
@@ -32,11 +38,8 @@
         * [ ] sections
             * [ ] nature
             * [ ] pets
-        * [ ] column formatting on all screen sizes
         * [ ] thumbnails
-        * [ ] metadata
-            * [ ] title of project
-            * [ ] tiny desc
+    * [ ] project pages
     * [ ] about
     * [ ] contact
     * [ ] socials
