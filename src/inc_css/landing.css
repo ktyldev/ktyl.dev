@@ -52,10 +52,17 @@
 @media only screen and (max-width: 600px) {
     .landing.page {
         position: fixed;
-
         margin: 0;
-        padding: 20% 0 0 0;
-
+        padding: 0;
         height: 100%;
+    }
+
+    .landing.page .socials {
+        top: .5em;
+        bottom: 0;
+    }
+
+    .landing.page .socials i {
+        font-size: 3em;
     }
 }
