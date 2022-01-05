@@ -24,6 +24,19 @@
         * [x] hope -> use
 
 * [-] features
+    * [-] blog
+    * [ ] blog builder
+        * [ ] i want to generate an entire page based on the existence of one markdown file
+        * [ ] the file should contain no metadata, that should all be generated automatically
+        * [ ] yyyy/mm/dd folder structure - can probably be copied from source
+        * [ ] auto generated <title> tags
+        * [ ] generated file will be in html but will need a second pass from ppp to insert regular templating things
+
+        * [ ] parse markdown blog into html
+        * [ ] embed parsed html into templated pages
+
+    * [ ] header
+        * [ ] sticky slidy from middle to side with scroll
     * [ ] nav
         * [ ] turn into <nav>
     * [-] footer
