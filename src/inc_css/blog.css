@@ -1,4 +1,92 @@
-.blog.page h1 {
-    padding-top: 10%;
-    font-size: 3em;
+.page .blog  {
 }
+
+.page .blog h1 {
+    font-size: 2.5em;
+}
+
+.page .blog .para-block {
+    color: var(--foreground-inactive);
+    font-size: 1.1em;
+
+    line-height: 1.25em;
+
+    background-color: var(--background);
+    border-color: var(--background-alt);
+    border-width: 3px;
+    border-radius: 2em;
+    border-style: solid;
+
+    padding: 1.0em 1.5em;
+}
+
+.page .blog .code-panel {
+    color: var(--background);
+    background-color: var(--foreground);
+
+    font-size 1.5em;
+    line-height: 1.3em;
+
+    border-color: var(--accent);
+    border-width: 2px;
+    border-radius: 2em;
+    border-style: solid;
+
+    padding: 1.0em 2.0em;
+    margin: 2.5em -4.0em;
+
+    overflow: hidden;
+}
+
+.page .blog .code-panel pre {
+    overflow: scroll;
+}
+
+.page .blog .separator {
+    margin: 2em;
+}
+
+.page .blog p code {
+    font-size: 1.2em;
+    height: 0.8em;
+    padding: 0.07em 0.25em;
+    margin: 0 0.1em;
+    background-color: var(--foreground);
+    color: var(--background);
+    border-radius: .3em;
+}
+
+ul.blog-index li {
+
+    display: block;
+    margin: .2em 0;
+}
+
+ul.blog-index li a {
+    color: var(--foreground-inactive);
+    transition: none;
+    text-decoration: none;
+}
+
+.blog-index li a:hover {
+    color: var(--accent);
+}
+
+.blog-index li a:visited {
+    color: var(--foreground);
+}
+
+.page ul.blog-index li a::before {
+    content: "• "
+}
+
+.blog-index .post-date {
+    padding-right: 1em;
+}
+
+@media only screen and (max-width: 700px) {
+    .page .blog .code-panel {
+        padding: 1.0em 5.0em;
+    }
+}
+

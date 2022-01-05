@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+outdir=site
+dest="/srv/http/"
+
+make clean
+make run
+
+sudo rm -r $dest/*
+sudo cp -r $outdir/* $dest
