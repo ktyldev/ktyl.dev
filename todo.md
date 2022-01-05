@@ -15,7 +15,8 @@
         * [x] smaller
     * [-] gallery
         * [x] column too thin
-        * [ ] invert media queries for :hover handling
+        * [ ] make whole image into link
+        * [ ] invert media queries for :hover handling on mobile
 
 * [x] content
     * lx] about
@@ -35,6 +36,7 @@
         * [ ] fade out along bottom edge
         * [ ] made by me
     * [ ] gallery
+        * [ ] generate from file
         * [ ] sections
             * [ ] nature
             * [ ] pets

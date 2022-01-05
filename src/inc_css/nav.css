@@ -28,16 +28,10 @@ ul.nav-links {
 .nav .nav-links li {
     display: block;
     margin-bottom: 0.8em;
-
-    transition: transform 0.3s;
 }
 
 .nav li a::before {
     content: "/";
-}
-
-.nav li:hover {
-    transform: translate(1vmax);
 }
 
 .nav li a {

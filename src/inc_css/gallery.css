@@ -56,9 +56,8 @@
 
 .wrapper .imgHolder span {
     position:absolute;
-    top:50%;
-    left:1em;
-    right:1em;
+    top:100%;
+    width:100%;
 
     transform: translateY(-50%) scale(0.6);
     text-align: center;
@@ -76,48 +75,16 @@
     color: var(--background);
 }
 
-.wrapper .imgHolder span a {
-    opacity: 1;
-    padding: .5em 0;
-    color: var(--background);
-    transition: all 0.1s;
-    text-decoration: none;
-}
-.wrapper .imgHolder span a:hover {
-    color: var(--accent);
-}
-
-.wrapper .imgHolder span i {
-    padding: 0 0.1em;
-    margin-top: .3em;
-    font-size: 2em;
-    color: var(--background);
-    transition: all 0.3s;
-}
-.wrapper .imgHolder span i:hover {
-    transform:translateY(-10%);
-    color:var(--accent);
-}
-
-.wrapper .imgHolder:hover span {
-    transform: translateY(-50%);
-    opacity:1;
-}
-
 .lightTileText {
     color: var(--background);
 }
 
-.wrapper .imgHolder:hover img {
-    border-style: solid;
-    border-width: 0;
-    border-radius: 100%;
-    border-color: var(--foreground);
-
-    filter: saturate(20) brightness(.5) blur(2px);
-}
-
-.icon-link {
+.wrapper .imgHolder a {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -135,12 +102,6 @@
         width:100%;
         height:100%;
         transform: none;
-    }
-    .wrapper .imgHolder span a {
-        position: absolute;
-        left:0;
-        width:100%;
-        height:100%;
     }
     .icon-link {
         display: none;
