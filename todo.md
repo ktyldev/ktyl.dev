@@ -15,6 +15,12 @@
         * [x] space out title
     * [x] solar system
         * [x] smaller
+        * [x] combine needlessly separated planets lol
+        * [ ] planet accent colors?
+        * [ ] variable block
+            * [ ] orbit color
+            * [ ] orbit thickness
+            * [ ] planet color
     * [-] gallery
         * [x] column too thin
         * [x] make whole image into link
