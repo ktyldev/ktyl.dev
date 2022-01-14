@@ -23,8 +23,12 @@
 }
 
 .page a {
+    /*
+    color: #dd2570;
     text-decoration: none;
+    */
     color: var(--accent);
+
     transition: all 0.1s;
 }
 .page a:hover {
@@ -47,6 +51,7 @@
 
     width: 100%;
     border-color: var(--background-alt);
+    border-color: var(--accent);
     border-width: 3px;
     border-style: solid;
 }

@@ -38,7 +38,197 @@
     z-index:-1;
 }
 
-#include mercury.css
-#include earth.css
-#include venus.css
-#include mars.css
+@-webkit-keyframes orbit_mercury {
+    from    { -webkit-transform: rotate(360deg) translateX(#or_mercury.css) rotate(360deg); }
+    to      { -webkit-transform: rotate(0deg) translateX(#or_mercury.css) rotate(0deg); }
+}
+@-moz-keyframes orbit_mercury {
+    from    { -moz-transform: rotate(360deg) translateX(#or_mercury.css) rotate(360deg); }
+    to      { -moz-transform: rotate(0deg) translateX(#or_mercury.css) rotate(0deg); }
+}
+@-o-keyframes orbit_mercury {
+    from    { -o-transform: rotate(360deg) translateX(#or_mercury.css) rotate(360deg); }
+    to      { -o-transform: rotate(0deg) translateX(#or_mercury.css) rotate(0deg); }
+}
+@keyframes orbit_mercury {
+    from    { transform: rotate(360deg) translateX(#or_mercury.css) rotate(360deg); }
+    to      { transform: rotate(0deg) translateX(#or_mercury.css) rotate(0deg); }
+}
+#mercury {
+    --period: 4.82s;
+    --radius: 30px;
+    --color: var(--background-alt);
+
+    width: var(--radius);
+    height: var(--radius);
+
+    background-color: var(--color);
+    right: #solposx.css;
+    bottom: #solposy.css;
+
+    -webkit-animation:  orbit_mercury var(--period) linear infinite;
+    -moz-animation:     orbit_mercury var(--period) linear infinite;
+    -o-animation:       orbit_mercury var(--period) linear infinite;
+    animation:          orbit_mercury var(--period) linear infinite;
+}
+#mercury-orbit {
+    --orbit-radius: #or_mercury.css;
+    --planet-radius: #pr_mercury.css;
+    --orbit-thickness: #orbit_thickness.css;
+    --diameter: calc(2 * var(--orbit-radius) + (var(--planet-radius) - var(--orbit-thickness)) / 2);
+
+    right:      #solposx.css;
+    bottom:     #solposy.css;
+    transform:  translate(#or_mercury.css, #or_mercury.css);
+
+    width:  var(--diameter);
+    height: var(--diameter);
+
+    border: #orbit_thickness.css solid var(--background-alt);
+}
+
+@-webkit-keyframes orbit_venus {
+    from    { -webkit-transform: rotate(360deg) translateX(#or_venus.css) rotate(360deg); }
+    to      { -webkit-transform: rotate(0deg) translateX(#or_venus.css) rotate(0deg); }
+}
+@-moz-keyframes orbit_venus {
+    from    { -moz-transform: rotate(360deg) translateX(#or_venus.css) rotate(360deg); }
+    to      { -moz-transform: rotate(0deg) translateX(#or_venus.css) rotate(0deg); }
+}
+@-o-keyframes orbit_venus {
+    from    { -o-transform: rotate(360deg) translateX(#or_venus.css) rotate(360deg); }
+    to      { -o-transform: rotate(0deg) translateX(#or_venus.css) rotate(0deg); }
+}
+@keyframes orbit_venus {
+    from    { transform: rotate(360deg) translateX(#or_venus.css) rotate(360deg); }
+    to      { transform: rotate(0deg) translateX(#or_venus.css) rotate(0deg); }
+}
+#venus {
+    --period: 12.3s;
+    --radius: #pr_venus.css;
+    --color: var(--background-alt);
+
+    width: var(--radius);
+    height: var(--radius);
+
+    background-color: var(--color);
+    right: #solposx.css;
+    bottom: #solposy.css;
+
+    -webkit-animation:  orbit_venus var(--period) linear infinite;
+    -moz-animation:     orbit_venus var(--period) linear infinite;
+    -o-animation:       orbit_venus var(--period) linear infinite;
+    animation:          orbit_venus var(--period) linear infinite;
+}
+#venus-orbit {
+    --orbit-radius: #or_venus.css;
+    --planet-radius: #pr_venus.css;
+    --orbit-thickness: #orbit_thickness.css;
+    --diameter: calc(2 * var(--orbit-radius) + (var(--planet-radius) - var(--orbit-thickness)) / 2);
+
+    right:      #solposx.css;
+    bottom:     #solposy.css;
+    transform:  translate(#or_venus.css, #or_venus.css);
+
+    width:  var(--diameter);
+    height: var(--diameter);
+    border: #orbit_thickness.css solid var(--background-alt);
+}
+
+@-webkit-keyframes orbit_earth {
+    from    { -webkit-transform: rotate(360deg) translateX(#or_earth.css) rotate(360deg); }
+    to      { -webkit-transform: rotate(0deg) translateX(#or_earth.css) rotate(0deg); }
+}
+@-moz-keyframes orbit_earth {
+    from    { -moz-transform: rotate(360deg) translateX(#or_earth.css) rotate(360deg); }
+    to      { -moz-transform: rotate(0deg) translateX(#or_earth.css) rotate(0deg); }
+}
+@-o-keyframes orbit_earth {
+    from    { -o-transform: rotate(360deg) translateX(#or_earth.css) rotate(360deg); }
+    to      { -o-transform: rotate(0deg) translateX(#or_earth.css) rotate(0deg); }
+}
+@keyframes orbit_earth {
+    from    { transform: rotate(360deg) translateX(#or_earth.css) rotate(360deg); }
+    to      { transform: rotate(0deg) translateX(#or_earth.css) rotate(0deg); }
+}
+#earth {
+    --period: 20s;
+    --radius: #pr_earth.css;
+    --color: var(--background-alt);
+
+    width: var(--radius);
+    height: var(--radius);
+
+    background-color: var(--color);
+    right: #solposx.css;
+    bottom: #solposy.css;
+
+    -webkit-animation:  orbit_earth var(--period) linear infinite;
+    -moz-animation:     orbit_earth var(--period) linear infinite;
+    -o-animation:       orbit_earth var(--period) linear infinite;
+    animation:          orbit_earth var(--period) linear infinite;
+}
+#earth-orbit {
+    --orbit-radius: #or_earth.css;
+    --planet-radius: #pr_earth.css;
+    --orbit-thickness: #orbit_thickness.css;
+    --diameter: calc(2 * var(--orbit-radius) + (var(--planet-radius) - var(--orbit-thickness)) / 2);
+
+    right:      #solposx.css;
+    bottom:     #solposy.css;
+    transform:  translate(#or_earth.css, #or_earth.css);
+
+    width:  var(--diameter);
+    height: var(--diameter);
+
+    border: #orbit_thickness.css solid var(--background-alt);
+}
+
+@-webkit-keyframes orbit_mars {
+    from    { -webkit-transform: rotate(360deg) translateX(#or_mars.css) rotate(360deg); }
+    to      { -webkit-transform: rotate(0deg) translateX(#or_mars.css) rotate(0deg); }
+}
+@-moz-keyframes orbit_mars {
+    from    { -moz-transform: rotate(360deg) translateX(#or_mars.css) rotate(360deg); }
+    to      { -moz-transform: rotate(0deg) translateX(#or_mars.css) rotate(0deg); }
+}
+@-o-keyframes orbit_mars{
+    from    { -o-transform: rotate(360deg) translateX(#or_mars.css) rotate(360deg); }
+    to      { -o-transform: rotate(0deg) translateX(#or_mars.css) rotate(0deg); }
+}
+@keyframes orbit_mars {
+    from    { transform: rotate(360deg) translateX(#or_mars.css) rotate(360deg); }
+    to      { transform: rotate(0deg) translateX(#or_mars.css) rotate(0deg); }
+}
+#mars {
+    --period: 37.6s;
+    --radius: #pr_mars.css;
+    --color: var(--background-alt);
+
+    width: var(--radius);
+    height: var(--radius);
+
+    background-color: var(--color);
+    right: #solposx.css;
+    bottom: #solposy.css;
+
+    -webkit-animation:  orbit_mars var(--period) linear infinite;
+    -moz-animation:     orbit_mars var(--period) linear infinite;
+    -o-animation:       orbit_mars var(--period) linear infinite;
+    animation:          orbit_mars var(--period) linear infinite;
+}
+#mars-orbit {
+    --orbit-radius: #or_mars.css;
+    --planet-radius: #pr_mars.css;
+    --orbit-thickness: #orbit_thickness.css;
+    --diameter: calc(2 * var(--orbit-radius) + (var(--planet-radius) - var(--orbit-thickness)) / 2);
+
+    right:      #solposx.css;
+    bottom:     #solposy.css;
+    transform:  translate(#or_mars.css, #or_mars.css);
+
+    width:  var(--diameter);
+    height: var(--diameter);
+
+    border: #orbit_thickness.css solid var(--background-alt);
+}
