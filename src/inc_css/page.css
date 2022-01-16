@@ -51,7 +51,6 @@
 
     width: 100%;
     border-color: var(--background-alt);
-    border-color: var(--accent);
     border-width: 3px;
     border-style: solid;
 }
