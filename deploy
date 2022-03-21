@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-make run
-mv site ktyl.dev
-scp -r ktyl.dev admin@saturn:~
-rm -r ktyl.dev
-
-ssh saturn "sudo ./deploy"
