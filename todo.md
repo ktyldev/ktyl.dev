@@ -1,6 +1,5 @@
 * [ ] transfer domain https://www.mythic-beasts.com/support/domains/transfer
 * [ ] hide scrollbars in bloggy code blocks https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp
-
 * [-] responsive design
     * [-] nav
         * [ ] side bar
