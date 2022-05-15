@@ -31,14 +31,6 @@ HTML_TARGETS 	= $(PAGES:$(ROOT_DIR)/%.html=$(OUT_DIR)/%.html)
 CSS_TARGETS 	= $(STYLES:$(ROOT_DIR)/%.css=$(OUT_DIR)/%.css)
 PNG_TARGETS		= $(IMG_DIR)/%.png=$(OUT_DIR)/%.png
 
-deploy: site
-	cp -r $(OUT_DIR) $(SITE_NAME)
-	rsync -rP $(SITE_NAME) $(HOST):~
-	rm -r $(SITE_NAME)
-	ssh $(HOST) "sudo $(REMOTE_SCRIPT)"
-
-run: site
-
 site: $(HTML_TARGETS) $(CSS_TARGETS)
 	cp $(IMG_DIR)/*.png $(OUT_DIR)/
 
