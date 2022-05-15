@@ -81,4 +81,6 @@ with open(dummy_file, 'r') as read_file, open(dest_file, 'w') as write_file:
 
 os.remove(dummy_file)
 
+print(f"{src_file} -> {dest_file}")
+markdown.markdownFromFile(input=src_file, output=dest_file, extensions=["fenced_code"])
 
