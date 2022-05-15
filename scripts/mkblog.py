@@ -36,41 +36,11 @@ if not os.path.isfile(src_file):
 
 # make dest dir if it doesnt exist
 
-with open(src_file) as md:
+dest_dir = os.path.dirname(dest_file)
+print(dest_dir)
+if not os.path.isdir(dest_dir):
+    os.makedirs(dest_dir)
 
-    dest_dir = os.path.dirname(dest_file)
-    print(dest_dir)
-    if not os.path.isdir(dest_dir):
-        os.makedirs(dest_dir)
-
-    with open(dest_file, "w") as html:
-
-        print(f"{src_file} -> {dest_file}")
-        html.write(markdown.markdown(md.read()))
-
-#for dir_y in os.listdir(src_dir):
-#    path_y = os.path.join(src_dir, dir_y)
-#
-#    if not os.path.isdir(path_y):
-#        continue
-#
-#    for dir_m in os.listdir(path_y):
-#        path_m = os.path.join(path_y, dir_m)
-#
-#        if not os.path.isdir(path_m):
-#            continue
-#
-#        for dir_d in os.listdir(path_m):
-#            path_d = os.path.join(path_m, dir_d)
-#
-#            if not os.path.isdir(path_d):
-#                continue
-#
-#            print(path_d)
-#            for md in os.listdir(path_d):
-#                path_md = os.path.join(path_d, md)
-#
-#                if not os.path.isfile(path_md):
-#                    continue
-
+print(f"{src_file} -> {dest_file}")
+markdown.markdownFromFile(input=src_file, output=dest_file, extensions=["fenced_code"])
 
