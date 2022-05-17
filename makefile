@@ -29,7 +29,12 @@ run: $(HTML_TARGETS) $(CSS_TARGETS) blog | $(OUT_DIR)
 
 blog: $(BLOG_TARGETS) | $(BLOG_TMP_DIR)
 
-$(BLOG_OUT_DIR)/%.html: $(BLOG_SRC_DIR)/%.md | $(BLOG_OUT_DIR)
+$(BLOG_OUT_DIR)/%.html: $(BLOG_OUT_DIR)/%.html.tmp $(HTML_INCLUDES) $(CSS_TARGETS)
+	python ppp/ppp.py $< $(HTML_INCLUDES) > $@
+	cp $(CSS_TARGETS) `dirname $@`
+	rm $<
+
+$(BLOG_OUT_DIR)/%.html.tmp: $(BLOG_SRC_DIR)/%.md | $(BLOG_TMP_DIR) 
 	python scripts/mkblog.py $< $@
 
 $(BLOG_OUT_DIR): | $(OUT_DIR)

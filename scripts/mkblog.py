@@ -3,6 +3,7 @@
 import os
 import sys
 import markdown
+import re
 
 #   SRC
 #   +-2022/
@@ -41,6 +42,35 @@ print(dest_dir)
 if not os.path.isdir(dest_dir):
     os.makedirs(dest_dir)
 
-print(f"{src_file} -> {dest_file}")
-markdown.markdownFromFile(input=src_file, output=dest_file, extensions=["fenced_code"])
+# write markdown into a dummy file first so that we can add lines before it in the final output
+dummy_file = f"{dest_file}.bak"
+open(dummy_file, 'w').close()
+
+print(f"{dummy_file} -> {dummy_file}")
+markdown.markdownFromFile(input=src_file, output=dummy_file, extensions=["fenced_code"])
+
+print(f"{dummy_file} -> {dest_file}")
+with open(dummy_file, 'r') as read_file, open(dest_file, 'w') as write_file:
+    write_file.write("#include blogstart.html\n")
+
+    # modify the basic html to make it nicer for styling later
+    html = read_file.read()
+
+    # insert para-block start between non-p and p elements
+    html = re.sub('((?<!</p>)\n)(<p>)', r'\1<div class="para-block">\n\2', html)
+    # insert para-block end between p and non-p elements
+    html = re.sub('(</p>\n)((?!<p>))', r'\1</div>\n\2', html)
+
+    lines = html.split("\n")
+
+    # tack on a closing div because we will have opened one without closing it on the final <p>
+    lines.append("</div>")
+
+    for line in lines:
+        write_file.write(line + "\n")
+
+    write_file.write("\n#include blogend.html\n")
+
+os.remove(dummy_file)
+
 
