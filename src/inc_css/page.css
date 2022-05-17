@@ -9,7 +9,7 @@
     transform: translate(-50%, 0);
 }
 
-.page .text-panel .separator {
+.page .separator {
     position: relative;
     background-color: var(--foreground-inactive);
 
