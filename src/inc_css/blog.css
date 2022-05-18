@@ -1,11 +1,11 @@
-.blog.page {
+.page .blog  {
 }
 
-.blog.page h1 {
+.page .blog h1 {
     font-size: 2.5em;
 }
 
-.blog.page .para-block {
+.page .blog .para-block {
     color: var(--foreground-inactive);
     font-size: 1.1em;
 
@@ -20,10 +20,7 @@
     padding: 1.0em 1.5em;
 }
 
-.blog.page .para-block p {
-}
-
-.blog.page pre {
+.page .blog .code-panel {
     color: var(--background);
     background-color: var(--foreground);
 
@@ -35,8 +32,63 @@
     border-radius: 2em;
     border-style: solid;
 
-    padding: 1.5em 2.0em;
+    padding: 1.0em 2.0em;
+    margin: 2.5em -4.0em;
 
-    margin: 2.5em -3.0em;
+    overflow: hidden;
+}
+
+.page .blog .code-panel pre {
+    overflow: scroll;
+}
+
+.page .blog .separator {
+    margin: 2em;
+}
+
+.page .blog p code {
+    font-size: 1.2em;
+    height: 0.8em;
+    padding: 0.07em 0.25em;
+    margin: 0 0.1em;
+    background-color: var(--foreground);
+    color: var(--background);
+    border-radius: .3em;
+}
+
+ul.blog-index li {
+
+    display: block;
+    margin: .2em 0;
+}
+
+ul.blog-index li a {
+    color: var(--foreground);
+    transition: none;
+    text-decoration: none;
+}
+
+/*
+.blog-index li {
+    color: var(--foreground);
+}
+
+*/
+.blog-index li a:hover {
+    color: var(--accent);
+}
+
+.blog-index li a:visited {
+    color: var(--foreground-inactive);
+}
+
+.page ul.blog-index li a::before {
+    content: "• "
+}
+
+@media only screen and (max-width: 700px) {
+    .page .blog .code-panel {
+        padding: 1.0em 5.0em;
+    }
 }
 

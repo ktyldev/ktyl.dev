@@ -46,7 +46,15 @@ ul.nav-links {
     color: var(--accent);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1200px) {
+    .nav .socials a {
+        padding: .2em 0;
+        display: block;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
     .nav {
         position: fixed;
         width: 100%;
@@ -54,6 +62,8 @@ ul.nav-links {
         z-index: 1;
         top: 0;
         height: 3em;
+
+        border-bottom: 3px solid var(--background-alt);
     }
 
     .nav .title {
@@ -84,6 +94,14 @@ ul.nav-links {
         display: none;
     }
 
+    .nav .socials {
+        position: fixed;
+        left: .5em;
+        bottom: .5em;
+    }
+}
+
+@media only screen and (max-width: 700px) {
     .nav .socials {
         display: none;
     }

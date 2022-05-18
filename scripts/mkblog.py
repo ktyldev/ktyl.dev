@@ -56,10 +56,18 @@ with open(dummy_file, 'r') as read_file, open(dest_file, 'w') as write_file:
     # modify the basic html to make it nicer for styling later
     html = read_file.read()
 
-    # insert para-block start between non-p and p elements
-    html = re.sub('((?<!</p>)\n)(<p>)', r'\1<div class="para-block">\n\2', html)
-    # insert para-block end between p and non-p elements
+    # insert text-panel start between non-<p> and <p> elements
+    html = re.sub('((?<!</p>)\n)(<p>)', r'\1<div class="text-panel">\n\2', html)
+    # insert para-block end between <p> and non-<p> elements
     html = re.sub('(</p>\n)((?!<p>))', r'\1</div>\n\2', html)
+
+    # insert code-panel start before <pre> elements
+    html = re.sub('(<pre>)', r'<div class="code-panel">\n\1', html)
+    # insert code-panel end after </pre> elements
+    html = re.sub('(</pre>)', r'\1\n</div>', html)
+
+    # replace horizontal rules with nice separator dot
+    html = re.sub('<hr />', r'<div class="separator"></div>', html)
 
     lines = html.split("\n")
 
