@@ -19,7 +19,10 @@ IMAGES			= $(shell find $(IMG_DIR) -wholename "$(IMG_DIR)/*.png")
 HTML_INCLUDES 	= $(shell find $(SRC_DIR)/inc_html -name *.html)
 CSS_INCLUDES	= $(shell find $(SRC_DIR)/inc_css -name *.css)
 
-BLOG_TARGETS	= $(BLOG_PAGES:$(BLOG_SRC_DIR)/%.md=$(BLOG_OUT_DIR)/%.html)
+BLOG_INDEX 			= $(OUT_DIR)/blog.html
+BLOG_INDEX_LINKS 	= $(BLOG_TMP_DIR)/blogindexlinks.html
+BLOG_TARGETS		= $(BLOG_PAGES:$(BLOG_SRC_DIR)/%.md=$(BLOG_OUT_DIR)/%.html)
+
 HTML_TARGETS 	= $(PAGES:$(ROOT_DIR)/%.html=$(OUT_DIR)/%.html)
 CSS_TARGETS 	= $(STYLES:$(ROOT_DIR)/%.css=$(OUT_DIR)/%.css)
 PNG_TARGETS		= $(IMG_DIR)/%.png=$(OUT_DIR)/%.png
@@ -28,6 +31,11 @@ run: $(HTML_TARGETS) $(CSS_TARGETS) blog | $(OUT_DIR)
 	cp $(IMG_DIR)/*.png $(OUT_DIR)/
 
 blog: $(BLOG_TARGETS) | $(BLOG_TMP_DIR)
+
+blog-index: $(BLOG_INDEX)
+
+$(BLOG_INDEX_LINKS): $(BLOG_TARGETS) | $(BLOG_TMP_DIR)
+	python scripts/mkblogindex.py $(BLOG_TARGETS) > $@
 
 $(BLOG_OUT_DIR)/%.html: $(BLOG_OUT_DIR)/%.html.tmp $(HTML_INCLUDES) $(CSS_TARGETS)
 	python ppp/ppp.py $< $(HTML_INCLUDES) > $@
@@ -43,8 +51,8 @@ $(BLOG_OUT_DIR): | $(OUT_DIR)
 $(BLOG_TMP_DIR):
 	mkdir -p $@
 
-$(OUT_DIR)/%.html: $(ROOT_DIR)/%.html $(HTML_INCLUDES) | $(OUT_DIR)
-	python ppp/ppp.py $< $(HTML_INCLUDES) > $@
+$(OUT_DIR)/%.html: $(ROOT_DIR)/%.html $(HTML_INCLUDES) $(BLOG_INDEX_LINKS) | $(OUT_DIR)
+	python ppp/ppp.py $< $(HTML_INCLUDES) $(BLOG_INDEX_LINKS) > $@
 
 $(OUT_DIR)/%.css: $(ROOT_DIR)/%.css $(CSS_INCLUDES) | $(OUT_DIR)
 	python ppp/ppp.py $< $(CSS_INCLUDES) > $@
@@ -52,5 +60,5 @@ $(OUT_DIR)/%.css: $(ROOT_DIR)/%.css $(CSS_INCLUDES) | $(OUT_DIR)
 $(OUT_DIR):
 	mkdir -p $@
 
-clean: 
-	rm -r $(OUT_DIR)
+clean:
+	rm -rf $(OUT_DIR) $(BLOG_TMP_DIR)

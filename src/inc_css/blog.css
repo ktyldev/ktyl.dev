@@ -63,27 +63,25 @@ ul.blog-index li {
 }
 
 ul.blog-index li a {
-    color: var(--foreground);
+    color: var(--foreground-inactive);
     transition: none;
     text-decoration: none;
 }
 
-/*
-.blog-index li {
-    color: var(--foreground);
-}
-
-*/
 .blog-index li a:hover {
     color: var(--accent);
 }
 
 .blog-index li a:visited {
-    color: var(--foreground-inactive);
+    color: var(--foreground);
 }
 
 .page ul.blog-index li a::before {
     content: "• "
+}
+
+.blog-index .post-date {
+    padding-right: 1em;
 }
 
 @media only screen and (max-width: 700px) {

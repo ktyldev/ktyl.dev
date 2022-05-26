@@ -19,7 +19,7 @@ import re
 def print_usage():
     print("\nusage: python mkblog.py SRC DEST\n")
     print("\n")
-    print("\t\SRC\tinput markdown file")
+    print("\t\tSRC\tinput markdown file")
     print("\t\tDEST\tdestination html file")
 
 # check args
