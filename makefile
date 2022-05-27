@@ -42,9 +42,8 @@ deploy: site
 	rm -r $(SITE_NAME)
 	ssh $(HOST) "sudo $(REMOTE_SCRIPT)"
 
-$(OUT_DIR)/%.html: $(ROOT_DIR)/%.html $(HTML_INCLUDES)
-	mkdir -p $(OUT_DIR)
-	python ppp/ppp.py $< $(HTML_INCLUDES) > $@
+$(OUT_DIR)/%.html: $(ROOT_DIR)/%.html $(HTML_INCLUDES) $(BLOG_INDEX_LINKS) | $(OUT_DIR)
+	python ppp/ppp.py $< $(HTML_INCLUDES) $(BLOG_INDEX_LINKS) > $@
 
 blog: $(BLOG_TARGETS) | $(BLOG_TMP_DIR)
 
