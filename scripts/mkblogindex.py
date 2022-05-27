@@ -24,6 +24,7 @@ title_pattern = re.compile("<h1>(.+)</h1>")
 
 # filter posts to just those with a date in them
 posts = [p for p in posts if path_pattern.match(p)]
+posts.reverse()
 
 # for each file we want to output an <a> tag with a relative href to the site root
 for path in posts:
