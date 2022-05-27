@@ -9,7 +9,7 @@
     transform: translate(-50%, 0);
 }
 
-.page .text-panel .separator {
+.page .separator {
     position: relative;
     background-color: var(--foreground-inactive);
 
@@ -23,10 +23,6 @@
 }
 
 .page a {
-    /*
-    color: #dd2570;
-    text-decoration: none;
-    */
     color: var(--accent);
 
     transition: all 0.1s;
@@ -37,8 +33,8 @@
 
 .page .text-panel {
     margin: 0;
-    margin-left: -2em;
-    padding: .6em 2em;
+    margin-left: -1.5em;
+    padding: 1.0em 1.5em;
     color: var(--foreground-inactive);
 
     font-size: 1.1em;
@@ -56,7 +52,7 @@
 }
 
 
-.page h1 {
+.page h1, h2 {
     color: var(--foreground-inactive);
 
     font-size: 1.7em;
@@ -67,7 +63,7 @@
     text-align: center;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .page {
         margin-top: 2.5em;
         width: 100%;
