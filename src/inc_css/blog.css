@@ -52,11 +52,10 @@
 }
 
 .page .blog p code {
-    font-size: 1.2em;
     height: 0.8em;
     padding: 0.07em 0.25em;
     margin: 0 0.1em;
-    background-color: var(--foreground);
+    background-color: var(--foreground-inactive);
     color: var(--background);
     border-radius: .3em;
 }
