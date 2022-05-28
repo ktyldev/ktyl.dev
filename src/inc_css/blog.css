@@ -41,6 +41,11 @@
 .page .blog .code-panel pre {
     overflow: scroll;
 }
+.page .blog .code-panel pre::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+    background: transparent;
+}
 
 .page .blog .separator {
     margin: 2em;
