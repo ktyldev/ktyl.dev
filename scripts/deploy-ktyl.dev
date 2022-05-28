@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+site="ktyl.dev"
+srcdir="./$site"
+webroot="/var/www"
+sitedir="$webroot/$site"
+
+
+[ -d $sitedir ] && rm -r $sitedir
+sudo -n mv $srcdir $webroot
