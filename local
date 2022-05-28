@@ -4,7 +4,7 @@ outdir=site
 dest="/srv/http/"
 
 make clean
-make run
+make all
 
 sudo rm -r $dest/*
 sudo cp -r $outdir/* $dest
