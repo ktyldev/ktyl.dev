@@ -24,6 +24,7 @@ HTML_INCLUDES 	= $(shell find $(SRC_DIR)/inc_html -name *.html)
 CSS_INCLUDES	= $(shell find $(SRC_DIR)/inc_css -name *.css)
 
 BLOG_INDEX 			= $(OUT_DIR)/blog.html
+BLOG_RSS			= $(BLOG_OUT_DIR)/index.xml
 BLOG_INDEX_LINKS 	= $(BLOG_TMP_DIR)/blogindexlinks.html
 BLOG_TARGETS		= $(BLOG_PAGES:$(BLOG_SRC_DIR)/%.md=$(BLOG_OUT_DIR)/%.html)
 
@@ -43,9 +44,16 @@ deploy: all
 $(OUT_DIR)/%.html: $(ROOT_DIR)/%.html $(HTML_INCLUDES) $(BLOG_INDEX_LINKS) | $(OUT_DIR)
 	python ppp/ppp.py $< $(HTML_INCLUDES) $(BLOG_INDEX_LINKS) > $@
 
-blog: $(BLOG_TARGETS) | $(BLOG_TMP_DIR)
+$(OUT_DIR)/%.css: $(ROOT_DIR)/%.css $(CSS_INCLUDES) | $(OUT_DIR)
+	python ppp/ppp.py $< $(CSS_INCLUDES) > $@
 
-blog-index: $(BLOG_INDEX)
+$(OUT_DIR):
+	mkdir -p $@
+
+blog: $(BLOG_TARGETS) $(BLOG_RSS) | $(BLOG_TMP_DIR)
+
+$(BLOG_RSS): $(BLOG_PAGES)
+	python scripts/mkblogrss.py $(BLOG_PAGES) > $@
 
 $(BLOG_INDEX_LINKS): $(BLOG_TARGETS) | $(BLOG_TMP_DIR)
 	python scripts/mkblogindex.py $(BLOG_TARGETS) > $@
@@ -64,14 +72,6 @@ $(BLOG_OUT_DIR): | $(OUT_DIR)
 $(BLOG_TMP_DIR):
 	mkdir -p $@
 
-$(OUT_DIR)/%.html: $(ROOT_DIR)/%.html $(HTML_INCLUDES) $(BLOG_INDEX_LINKS) | $(OUT_DIR)
-	python ppp/ppp.py $< $(HTML_INCLUDES) $(BLOG_INDEX_LINKS) > $@
-
-$(OUT_DIR)/%.css: $(ROOT_DIR)/%.css $(CSS_INCLUDES) | $(OUT_DIR)
-	python ppp/ppp.py $< $(CSS_INCLUDES) > $@
-
-$(OUT_DIR):
-	mkdir -p $@
 
 clean:
 	rm -rf $(OUT_DIR) $(BLOG_TMP_DIR)

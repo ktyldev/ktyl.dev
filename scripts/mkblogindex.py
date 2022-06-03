@@ -28,7 +28,12 @@ posts.reverse()
 
 # for each file we want to output an <a> tag with a relative href to the site root
 for path in posts:
-    date = re.sub(path_pattern, r'<span class="post-date">\2-\3-\4</span>', path)
+    m = re.match(path_pattern, path)
+    year = m.group(2)
+    month = m.group(3).rjust(2, '0')
+    day = m.group(4).rjust(2, '0')
+
+    date = f'<span class="post-date">{year}-{month}-{day}</span>'
 
     title = ""
     with open(path) as f:
