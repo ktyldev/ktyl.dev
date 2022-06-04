@@ -1,0 +1,24 @@
+.pfp {
+    position: relative;
+    top: 3em;
+    left: 50%;
+    width: 20em;
+    height: 20em;
+    text-align: center;
+    overflow: hidden;
+    border-color: var(--background-alt);
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 50%;
+    transform: translate(-50%, 0);
+    margin-bottom: 4em;
+}
+
+.pfp img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: auto;
+    transform: translate(-50%, -50%);
+}

@@ -34,6 +34,7 @@ PNG_TARGETS		= $(IMG_DIR)/%.png=$(OUT_DIR)/%.png
 
 all: $(HTML_TARGETS) $(CSS_TARGETS) blog | $(OUT_DIR)
 	cp $(IMG_DIR)/*.png $(OUT_DIR)/
+	cp $(IMG_DIR)/*.jpg $(OUT_DIR)/
 
 deploy: all
 	cp -r $(OUT_DIR) $(SITE_NAME)
