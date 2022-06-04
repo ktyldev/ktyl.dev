@@ -34,6 +34,7 @@ PNG_TARGETS		= $(IMG_DIR)/%.png=$(OUT_DIR)/%.png
 
 site: $(HTML_TARGETS) $(CSS_TARGETS)
 	cp $(IMG_DIR)/*.png $(OUT_DIR)/
+	cp $(IMG_DIR)/*.jpg $(OUT_DIR)/
 
 run: site
 

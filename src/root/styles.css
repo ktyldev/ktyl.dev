@@ -17,6 +17,7 @@ body {
 #include page.css
 #include landing.css
 #include blog.css
+#include about.css
 
 li {
     display:inline;
