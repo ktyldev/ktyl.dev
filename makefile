@@ -33,6 +33,8 @@ CSS_TARGETS 	= $(STYLES:$(ROOT_DIR)/%.css=$(OUT_DIR)/%.css)
 PNG_TARGETS		= $(IMG_DIR)/%.png=$(OUT_DIR)/%.png
 
 all: $(HTML_TARGETS) $(CSS_TARGETS) blog | $(OUT_DIR)
+	cp $(IMG_DIR)/*.png $(OUT_DIR)/
+	cp $(IMG_DIR)/*.jpg $(OUT_DIR)/
 
 site: $(HTML_TARGETS) $(CSS_TARGETS)
 	cp $(IMG_DIR)/*.png $(OUT_DIR)/
