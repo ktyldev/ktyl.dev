@@ -1,7 +1,11 @@
 .footer {
-    position: fixed;
-    right: 0;
-    bottom: 0;
+    position: relative;
+}
 
-    padding: 0 10px 10px;
+.footer span {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: var(--foreground-inactive);
+    padding: 2em;
 }
