@@ -26,6 +26,8 @@ title_pattern = re.compile("<h1>(.+)</h1>")
 posts = [p for p in posts if path_pattern.match(p)]
 posts.reverse()
 
+links = []
+
 # for each file we want to output an <a> tag with a relative href to the site root
 for path in posts:
     m = re.match(path_pattern, path)
@@ -45,5 +47,13 @@ for path in posts:
     # clean leading directories to get the relative path we'll use for the link
     url = re.sub(dir_pattern, r"\2", path)
 
-    print(f'<li><a href="{url}">{date}{title}</a></li>')
+    item = (date, f'<li><a href="{url}">{date}{title}</a></li>')
+    links.append(item)
+
+# make sure we're properly ordered in reverse date order lol
+links = sorted(links, key=lambda x: x[0])
+links.reverse()
+
+for l in links:
+    print(l[1])
 
