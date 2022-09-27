@@ -3,4 +3,4 @@
 	url = https://github.com/ktyldev/ppp
 [submodule "blog"]
 	path = blog
-	url = https://github.com/ktyldev/blog.git
+	url = https://git.pizzawednesday.club/ktyl/blog.git

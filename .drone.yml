@@ -1,0 +1,71 @@
+kind: pipeline
+type: docker
+name: deploy
+
+steps:
+- name: submodules
+  image: archlinux
+  commands: 
+  - pacman -Sy --noconfirm git >/dev/null
+  - git submodule update --init --recursive
+
+- name: build
+  image: archlinux
+  environment:
+    PYTHON_ENV: python python-pipenv python-setuptools
+
+  commands:
+    # set up python
+    - pacman -Sy --noconfirm make $PYTHON_ENV > /dev/null
+    - pipenv install
+
+    # build site
+    - make all
+
+- name: deploy
+  image: ubuntu
+  environment:
+    HOST:
+      from_secret: host
+    USER:
+      from_secret: user
+    SSH_KEY:
+      from_secret: ssh_key
+
+  when:
+    branch:
+    - main
+
+  commands:
+    # install deps
+    - apt-get update -qq > /dev/null
+    - apt-get install ssh rsync -qq > /dev/null
+
+    # configure ssh
+    - eval $(ssh-agent -s)
+    - mkdir -p ~/.ssh
+    - echo "$SSH_KEY" > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - ssh-add
+    - echo "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+
+    # prepare vars for host operations
+    - host_dir="/var/www/$${HOST}"
+    - backup_dir="~/backups/$${HOST}/$${HOST}-$${DRONE_STAGE_STARTED}"
+    - host="$${USER}@$${HOST}"
+
+    # tasks
+    - make_backup_dir="mkdir -p $backup_dir"
+    - copy_backup_files="rsync -rP $host_dir $backup_dir"
+    - delete_current_files="sudo -n rm -r $host_dir"
+    - deploy_new_files="sudo -n mv $${HOST} $host_dir"
+
+    # archive old site
+    - ssh $host $make_backup_dir
+    - ssh $host $copy_backup_files
+
+    # deploy new site
+    - rsync -rP site/* "$host:$${HOST}"
+    - ssh $host $delete_current_files
+    - ssh $host $deploy_new_files
+

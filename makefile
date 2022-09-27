@@ -32,7 +32,7 @@ HTML_TARGETS 	= $(PAGES:$(ROOT_DIR)/%.html=$(OUT_DIR)/%.html)
 CSS_TARGETS 	= $(STYLES:$(ROOT_DIR)/%.css=$(OUT_DIR)/%.css)
 PNG_TARGETS		= $(IMG_DIR)/%.png=$(OUT_DIR)/%.png
 
-site: $(HTML_TARGETS) $(CSS_TARGETS)
+all: $(HTML_TARGETS) $(CSS_TARGETS) blog | $(OUT_DIR)
 	cp $(IMG_DIR)/*.png $(OUT_DIR)/
 	cp $(IMG_DIR)/*.jpg $(OUT_DIR)/
 
@@ -56,10 +56,10 @@ $(OUT_DIR):
 blog: $(BLOG_TARGETS) $(BLOG_RSS) | $(BLOG_TMP_DIR)
 
 $(BLOG_RSS): $(BLOG_PAGES)
-	python scripts/mkblogrss.py $(BLOG_PAGES) > $@
+	pipenv run python scripts/mkblogrss.py $(BLOG_PAGES) > $@
 
 $(BLOG_INDEX_LINKS): $(BLOG_TARGETS) | $(BLOG_TMP_DIR)
-	python scripts/mkblogindex.py $(BLOG_TARGETS) > $@
+	pipenv run python scripts/mkblogindex.py $(BLOG_TARGETS) > $@
 
 $(BLOG_OUT_DIR)/%.html: $(BLOG_OUT_DIR)/%.html.tmp $(HTML_INCLUDES) $(CSS_TARGETS)
 	python ppp/ppp.py $< $(HTML_INCLUDES) > $@
@@ -67,7 +67,7 @@ $(BLOG_OUT_DIR)/%.html: $(BLOG_OUT_DIR)/%.html.tmp $(HTML_INCLUDES) $(CSS_TARGET
 	rm $<
 
 $(BLOG_OUT_DIR)/%.html.tmp: $(BLOG_SRC_DIR)/%.md | $(BLOG_TMP_DIR) 
-	python scripts/mkblog.py $< $@
+	pipenv run python scripts/mkblog.py $< $@
 
 $(BLOG_OUT_DIR): | $(OUT_DIR)
 	mkdir -p $@
