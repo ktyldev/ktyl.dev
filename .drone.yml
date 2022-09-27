@@ -31,6 +31,7 @@ steps:
       from_secret: user
     SSH_KEY:
       from_secret: ssh_key
+
   commands:
     # install deps
     - apt-get update -qq > /dev/null
@@ -69,3 +70,4 @@ steps:
     event:
       exclude:
       - pull_request
+
