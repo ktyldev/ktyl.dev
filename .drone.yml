@@ -32,10 +32,6 @@ steps:
     SSH_KEY:
       from_secret: ssh_key
 
-  when:
-    branch:
-    - main
-
   commands:
     # install deps
     - apt-get update -qq > /dev/null
@@ -68,4 +64,6 @@ steps:
     - rsync -rP site/* "$host:$${HOST}"
     - ssh $host $delete_current_files
     - ssh $host $deploy_new_files
-
+  when:
+    branch:
+    - main
